@@ -1,0 +1,149 @@
+<!-- This is my hobby page -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Hobbies | Blake Trebelhorn</title>
+    <meta name="description" content="Hobbies" />
+    <meta name="author" content="Blake Trebelhorn" />
+    <meta name="keywords" content="hobbies, Blake Trebelhorn Hobbies" />
+    <meta name="viewport" content="width=device-width; initial-scale=1; maximum-scale=1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300" />
+    <link rel="stylesheet" type="text/css" href="../assets/style.css">
+    <script type="text/javascript" src="../assets/main.js"></script>
+    <script type="text/javascript">
+        var images = ["http://cdn.edgecast.steamstatic.com/steam/apps/292030/header.jpg?t=1509077015","http://cdn.edgecast.steamstatic.com/steam/apps/211420/header.jpg?t=1483694369","http://cdn.edgecast.steamstatic.com/steam/apps/200260/header.jpg?t=1461102763","http://cdn.edgecast.steamstatic.com/steam/apps/359550/header.jpg?t=1510567415","http://cdn.edgecast.steamstatic.com/steam/apps/8870/header.jpg?t=1486444091"];
+        var index = 0;
+        function nextImage()
+        {
+            var img=document.getElementById("slideImage");
+            if (index == images.length-1) { index = 0; }
+            else { index++; }
+            img.src = images[index];
+        }
+        function prevImage()
+        {
+            var img = document.getElementById("slideImage");
+            if(index==0){ index = images.length-1; }
+            else { index--; }
+            img.src = images[index];
+        }
+    </script>
+    <!-- Global Site Tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-107918307-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-107918307-1');
+
+    </script>
+    <style>
+        input[type=button] {
+            color: white;
+            padding: 12px 30px;
+            border-radius: 5px;
+            background-color: #4CAF50;
+            border: none;
+            font-size: 16px;
+        }
+
+        input[type=button] :hover {
+            background-color: #388E3C;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>
+            <a href="../index.html">Blake Trebelhorn</a>
+        </h1>
+    </header>
+    <nav>
+        <ul>
+            <!--https://css-tricks.com/fighting-the-space-between-inline-block-elements/ -->
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../hobbies/index.html" class="active">Hobbies</a></li>
+            <li><a href="../contact/index.html">Contact</a></li>
+            <li><a href="../resume/index.html">R&eacute;sum&eacute;</a></li>
+        </ul>
+    </nav>
+    <section>
+        <h2>Hobbies</h2>
+        <a id="top"></a> Some of my interests include:
+        <ul>
+            <li>Computer Programming</li>
+            <li>Scripting</li>
+            <li>Hardware Hacking</li>
+            <li>Android Ecosystem</li>
+            <li>GNU/Linux</li>
+            <li>Cybersecurity</li>
+            <li>3D Printing</li>
+            <li><a href="#gaming">Gaming</a></li>
+            <li><a href="#taekwondo">Martial Arts</a></li>
+            <li><a href="#scouting">Scouting</a></li>
+        </ul>
+        <a id="#gaming"></a>
+        <h3>Gaming</h3>
+        My favorite video games are:
+        <ol>
+            <li><a href="http://store.steampowered.com/app/292030/The_Witcher_3_Wild_Hunt/" target="_blank">The Witcher&copy; 3: Wild Hunt</a></li>
+            <li><a href="http://store.steampowered.com/app/211420/DARK_SOULS_Prepare_To_Die_Edition/" target="_blank">Dark Souls&trade;: Prepare To Die&trade; Edtion</a></li>
+            <li><a href="http://store.steampowered.com/app/200260/Batman_Arkham_City__Game_of_the_Year_Edition/" target="_blank">Batman: Arkham City</a></li>
+            <li> <a href="http://store.steampowered.com/app/359550/Tom_Clancys_Rainbow_Six_Siege/" target="_blank">Tom Clancy's Rainbow Six&reg; Siege</a> </li>
+            <li><a href="http://store.steampowered.com/app/8870/BioShock_Infinite/" target="_blank">Bioshock Infinite</a></li>
+        </ol>
+        <p>
+            <img id="slideImage" src="http://cdn.edgecast.steamstatic.com/steam/apps/292030/header.jpg?t=1509077015" style="max-width: 460px; width: 100%; height: auto;" alt="Slideshow Image"/>
+        </p>
+        <form name="slideform">
+            <input type="button" id="prevBtn" value="Previous" onclick="prevImage()" />
+            <input type="button" id="nextBtn" value="Next" onclick="nextImage()" />
+        </form>
+        <br />
+        Here's a short description of each of the games:
+        <dl>
+            <dt>The Witcher&copy; 3: Wild Hunt<dt>
+                <dd>The Witcher is a story-driven, next-generation open world role-playing game, set in a visually stunning fantasy universe, full of meaningful choices and impactful consequences. In The Witcher, you play as Geralt of Rivia, a monster hunter tasked with finding a child from an ancient prophecy.</dd>
+            <dt>Dark Souls&trade;: Prepare To Die&trade; Edtion</dt>
+            <dd>Dark Souls will be the most deeply challenging game you play this year. Can you live through a million deaths and earn your legacy?</dd>
+            <dt>Batman: Arkham City</dt>
+            <dd>When part of Gotham is turned into a private reserve for criminals known as Arkham City, all hell is sure to break loose, and the Dark Knight is the only one who can stop it.</dd>
+            <dt>Tom Clancy's Rainbow Six&reg; Siege</dt>
+            <dd>Rainbow Six Siege is an intense, new approach to the first-person shooter experience. Choose from a variety of unique Counter-Terrorist Operators and master their abilities as you lead your team through tense, thrilling, and destructive team-based combat.</dd>
+            <dt>BioShock Infinite</dt>
+            <dd>Indebted to the wrong people, with his life on the line, veteran of the U.S. Cavalry and now hired gun, Booker DeWitt has only one opportunity to wipe his slate clean. He must rescue Elizabeth, a mysterious girl imprisoned since childhood and locked up in the flying city of Columbia.</dd>
+        </dl>
+
+        <a id="#taekwondo"></a>
+        <h3>TaeKwonDo</h3>
+        <p>
+            As a child I was always interested in martial arts. For my 8<sup>th</sup> birthday my parents signed me up for a TaeKwonDo class at the rec center. I attended training two times a week with testing every few months to work my way up the ranks. I participated in tournaments where I fought, broke boards, and competed in forms; a sequence of moves in which you memorize. After 4 &frac12; years I achieved the rank of 1<sup>st</sup> dan blackbelt, the first of the 10 blackbelt ranks in TaeKwonDo.
+        </p>
+
+        <a id="scouting"></a>
+        <h3>Scouting</h3>
+        <p>
+            I initially started my Boy Scouts career in Kindergarten. I joined alongside my best friend, whom I still talk to every weekend. While in Cub Scouts, the lower section of Boy Scouts, I enjoyed learning many valuable skills. I moved up through the ranks of Cub Scouts each school year unti I reached Tenderfoot, the first rank of Boy Scouts. Boy Scouting offered much more that Cub Scouting did. Some of my favorite memories include a summer of biking which ended with a 50 mile ride in a single day. Another one is going on a weeklong camp each year with all of my friends, where we swam, climbed, cooked, and much more. One of the coolest things we did was camp in sub-zero temperatures for 24 hours, which included sleeping in an igloo we made ourselves. My greatest achievement in Scouting was attaining the rank of Eagle Scout, which is an honor only 4% of Boy Scouts receive. One of the requirements for an Eagle Scout is planning and carrying out a community service project. I designed and raised funds for a new dock at the local nature reserve. The original one was over 30 years old and was sinking into the ground. The dock I designed is larger and has a bench around &frac34; of the structure.
+        </p>
+        <br />
+        <a href="#top">Return to the top</a>
+    </section>
+    <footer>
+        <a href="https://twitter.com/TrebelMaker" target="_blank"><img src="../assets/images/twitter.png" alt="Twitter" /></a> &nbsp;
+        <a href="https://facebook.com/blake.trebelhorn" target="_blank"><img src="../assets/images/facebook.png" alt="Facebook" /></a> &nbsp;
+        <a href="https://drake.edu" target="_blank"><img src="../assets/images/drake.png" alt="Drake" /></a> &nbsp;
+        <a href="https://github.com/BlakeTrebelhorn" target="_blank"><img src="../assets/images/github.png" alt="GitHub" /></a>
+        <a href="https://validator.w3.org/check?url=referer" target="_blank"><img src="https://validator.w3.org/images/HTML5_Badge_32.png" alt="HTML Icon" /></a>
+        <a href="https://jigsaw.w3.org/css-validator/check?url=referer" target="_blank"><img src="https://www.w3.org/Icons/valid-css" style="width: auto" alt="CSS Icon" /></a>
+        <br /> Blake Trebelhorn
+    </footer>
+</body>
+
+</html>

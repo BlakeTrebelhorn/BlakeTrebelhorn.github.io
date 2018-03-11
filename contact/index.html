@@ -1,0 +1,174 @@
+<!-- This page is a placeholder for contacting me - eventually it will work better -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Contact | Blake Trebelhorn</title>
+    <meta name="description" content="Contact Me" />
+    <meta name="author" content="Blake Trebelhorn" />
+    <meta name="keywords" content="contact Blake Trebelhorn, contact" />
+    <meta name="viewport" content="width=device-width; initial-scale=1; maximum-scale=1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300" />
+    <link rel="stylesheet" type="text/css" href="../assets/style.css">
+    <!-- Global Site Tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-107918307-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-107918307-1');
+
+    </script>
+
+    <style type="text/css">
+        input[type=text]:focus,
+        input[type=email]:focus,
+        textarea:focus {
+            outline: none;
+            border: 2px solid green;
+        }
+
+        input[type=text]:invalid,
+        input[type=email]:invalid,
+        textarea:invalid {
+            border-color: 5px solid red;
+            background-color: pink;
+        }
+
+        input[type=text],
+        input[type=email],
+        textarea {
+            display: table-cell;
+            width: 100%;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+            padding: .75em 1em;
+            display: inline-block;
+            border-radius: 4px;
+            margin: .75em 0;
+
+        }
+
+        table {
+            width: 100%;
+        }
+
+        div {
+            /*text-align: center;*/
+            display: table;
+            width: 50%;
+            max-width: 1336px;
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            /*padding: 20px;*/
+        }
+
+        .center {
+            margin: auto;
+            width: 60%;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+
+        .button {
+            color: white;
+            padding: 12px 30px;
+            border-radius: 5px;
+            background-color: #4CAF50;
+            border: none;
+            font-size: 16px;
+        }
+
+        .button:hover {
+            background-color: #388E3C;
+        }
+
+        @media screen and (max-width: 700px) {
+            .center {
+                width: 90%;
+            }
+
+            .button {
+                padding: 12px 20px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>
+            <a href="../index.html">Blake Trebelhorn</a>
+        </h1>
+    </header>
+    <nav>
+        <ul>
+            <!--https://css-tricks.com/fighting-the-space-between-inline-block-elements/ -->
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../hobbies/index.html">Hobbies</a></li>
+            <li><a href="../contact/index.html" class="active">Contact</a></li>
+            <li><a href="../resume/index.html">R&eacute;sum&eacute;</a></li>
+        </ul>
+    </nav>
+
+    <div class="center">
+        <h2 style="text-align: center; ">
+            Send an e-mail to me!
+        </h2>
+        <form action="contactSubmit.php" method="post">
+            <table>
+                <tr>
+                    <td>Name</td>
+                    <td><input type="text" name="name" placeholder="Your Name" minlength="5"></td>
+                </tr>
+                <tr>
+                    <td>Email</td>
+                    <td><input type="email" name="email" placeholder="Your Email"></td>
+                    <!-- pattern=".+@.+\...+" -->
+                </tr>
+                <tr>
+                    <td>Subject</td>
+                    <td><input type="text" name="subject" placeholder="Subject" minlength="4"></td>
+                </tr>
+                <tr>
+                    <td>Message</td>
+                    <td><textarea name="message" placeholder="Message" rows="10" minlength="20"></textarea></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td style="float: right;"><button type="reset" class="button">Reset</button> <button type="submit" class="button">Send</button></td>
+                </tr>
+            </table>
+        </form>
+        <!--
+        <form action="mailto:blake.trebelhorn@drake.edu" method="post" enctype="text/plain">
+            <br> Email
+            <br>
+            <input type="text" name="email" placeholder="Your Email">
+            <br> Message
+            <br>
+            <textarea name="message" placeholder="Message" style="height: 150px;"></textarea>
+
+            <button type="submit" class="button">Send</button>
+            <button type="reset" class="button">Reset</button>
+        </form>
+-->
+    </div>
+    <footer>
+        <a href="https://twitter.com/TrebelMaker" target="_blank"><img src="../assets/images/twitter.png" alt="Twitter" /></a> &nbsp;
+        <a href="https://facebook.com/blake.trebelhorn" target="_blank"><img src="../assets/images/facebook.png" alt="Facebook" /></a> &nbsp;
+        <a href="https://drake.edu" target="_blank"><img src="../assets/images/drake.png" alt="Drake" /></a> &nbsp;
+        <a href="https://github.com/BlakeTrebelhorn" target="_blank"><img src="../assets/images/github.png" alt="GitHub" /></a>
+        <a href="https://validator.w3.org/check?url=referer" target="_blank"><img src="https://validator.w3.org/images/HTML5_Badge_32.png" alt="HTML Icon" /></a>
+        <a href="https://jigsaw.w3.org/css-validator/check?url=referer" target="_blank"><img src="https://www.w3.org/Icons/valid-css" style="width: auto" alt="CSS Icon" /></a>
+        <br /> Blake Trebelhorn
+    </footer>
+</body>
+
+</html>

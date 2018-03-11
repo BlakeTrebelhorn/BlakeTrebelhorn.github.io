@@ -1,0 +1,99 @@
+<!-- This is Blake Trebelhorn's home page -->
+<!-- My inline css style is at the beginning of my body section -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Blake Trebelhorn | My Website</title>
+    <meta name="description" content="Blake Trebelhorn's Landing Page" />
+    <meta name="author" content="Blake Trebelhorn" />
+    <meta name="keywords" content="Blake Trebelhorn, Trebelhorn" />
+    <meta name="viewport" content="width=device-width; initial-scale=1; maximum-scale=1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300" />
+    <link rel="stylesheet" type="text/css" href="assets/style.css" />
+    <script type="text/javascript" src="assets/main.js"></script>
+    <!-- Global Site Tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-107918307-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-107918307-1');
+
+    </script>
+
+    <style>
+        div {
+            /* to center align my image/text */
+            text-align: center;
+        }
+
+        body p {
+            box-shadow: #D8D8D8 .5em .5em .5em;
+            padding: .25em;
+            border-radius: .5em;
+        }
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>
+            <a href="index.html">Blake Trebelhorn</a>
+        </h1>
+    </header>
+    <nav>
+        <ul>
+            <!--https://css-tricks.com/fighting-the-space-between-inline-block-elements/ -->
+            <li><a href="../index.html" class="active">Home</a></li>
+            <li><a href="../hobbies/index.html">Hobbies</a></li>
+            <li><a href="../contact/index.html">Contact</a></li>
+            <li><a href="../resume/index.html">R&eacute;sum&eacute;</a></li>
+        </ul>
+    </nav>
+    <section>
+        <div>
+            <h2 style="font-weight: 500">About Me</h2>
+            <!-- bolden font just a bit (using 300 as default) -->
+            <div class="flip-container">
+                <div class="flipper">
+                    <div class="front">
+                        <img src="assets/images/circle_me.png" alt="A Picture of Me" />
+                    </div>
+                    <div class="back" style="width: 284px; height: 284px;">
+                        <p style="position: relative; top: 45%; transform: translateY(-55%); box-shadow: none;">
+                            <img src="assets/images/BlakeTrebelhorn.png" alt="My Identicon" />
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p>
+            <b>Hello!</b> My name is Blake Trebelhorn and I am a third year student at Drake University. I am double majoring in Computer Science and Data Analytics with a minor in Mathematics. Currently, I am employed by Drake as a student IT technician for the college of Arts and Sciences. My past work experiences include another on-campus job working at the Drake IT help desk and a summer internship at Daikin Applied Americas. While interning for Daikin, I gained a deeper understanding for the Windows environment as well as analytical skills in data science.
+        </p>
+        <p>
+            One thing I love to do is toy with my computers and phone. Just about every week I'll have either (software) broken my phone or computer trying to fix or improve some aspect of it. Within a day (usually hours) I'll have it back up and running. I started playing with technology in my middle school years when I first got an iPod touch. I wanted more out of the device, so I looked into how I could do that. I learned about Jailbreaking and went from there. I started offering to Jailbreak my peer's iPods and iPhones. I eventually got an iPhone myself, and unfortunately cracked the screen like so many people do. I, however, tore the phone open and replaced the screen myself. Over the course of my high school years, I replaced a plethora of screens just from word of mouth.
+        </p>
+        <p>
+            I also fixed other systems, including Windows, macOS, Xbox, and PS4 systems. I purchased my own MacBook which I dual booted with Windows 7. I moved onto the Android ecosystem once Ice Cream Sandwich (4.0) was released. I haven't used an iPhone since, but still work with them nearly every day. Nowadays I only use Android phones, which I unlock and root as soon as I get them. The laptop I currently use I dual boot with Ubuntu, which has become my daily driver for all of my school work.
+        </p>
+    </section>
+
+    <footer>
+        <a href="https://twitter.com/TrebelMaker" target="_blank"><img src="assets/images/twitter.png" alt="Twitter" /></a> &nbsp;
+        <a href="https://facebook.com/blake.trebelhorn" target="_blank"><img src="assets/images/facebook.png" alt="Facebook" /></a> &nbsp;
+        <a href="https://drake.edu" target="_blank"><img src="/assets/images/drake.png" alt="Drake" /></a> &nbsp;
+        <a href="https://github.com/BlakeTrebelhorn" target="_blank"><img src="assets/images/github.png" alt="GitHub" /></a>
+        <a href="https://validator.w3.org/check?url=referer" target="_blank"><img src="https://validator.w3.org/images/HTML5_Badge_32.png" alt="HTML Icon" /></a>
+        <a href="https://jigsaw.w3.org/css-validator/check?url=referer" target="_blank"><img src="https://www.w3.org/Icons/valid-css" style="width: auto" alt="CSS Icon" /></a>
+        <br /> Blake Trebelhorn
+    </footer>
+</body>
+
+</html>

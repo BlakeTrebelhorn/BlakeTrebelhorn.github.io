@@ -1,0 +1,100 @@
+<!-- This page is a placeholder for contacting me - eventually it will work better -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Contact | Blake Trebelhorn</title>
+    <meta name="description" content="Contact Me" />
+    <meta name="author" content="Blake Trebelhorn" />
+    <meta name="keywords" content="contact Blake Trebelhorn, contact" />
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+
+    <!-- internal css -->
+    <style type="text/css">
+        input[type=text]:focus,
+        textarea:focus {
+            outline: none;
+            border: 2px solid red;
+        }
+        
+        input[type=text],
+        textarea {
+            width: 100%;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+            padding: 12px 15px;
+            display: inline-block;
+            border-radius: 4px;
+        }
+        
+        div {
+            width: 50%;
+            border-radius: 5px;
+            background-color: #f2f2f2;
+        }
+        
+        .center {
+            margin: auto;
+            width: 60%;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+        
+        .button {
+            color: white;
+            padding: 12px 30px;
+            border-radius: 5px;
+            background-color: #4CAF50;
+            border: none;
+            font-size: 16px;
+        }
+        
+        .button:hover {
+            background-color: #388E3C;
+        }
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <h1>
+            <a href="../index.html">Blake Trebelhorn</a>
+        </h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="../index.html" style="color: #fff">Home</a></li>
+            <li><a href="../hobbies/index.html" style="color: #fff;">Hobbies</a></li>
+            <li><a href="../contact/index.html" style="color: #fff;">Contact</a></li>
+            <li><a href="../resume/index.html" style="color: #fff;">R&eacute;sum&eacute;</a></li>
+        </ul>
+    </nav>
+    <div class="center">
+        <h1 style="text-align: center; ">
+            Send an e-mail to me!
+        </h1>
+        <form action="mailto:blake.trebelhorn@drake.edu" method="post" enctype="text/plain">
+            <br> Email
+            <br>
+            <input type="text" name="email" placeholder="Your Email">
+            <br> Message
+            <br>
+            <textarea name="message" placeholder="Message" style="height: 150px;"></textarea>
+
+            <button type="submit" class="button">Send</button>
+            <button type="reset" class="button">Reset</button>
+        </form>
+    </div>
+    <footer>
+        <a href="https://twitter.com/TrebelMaker" target="_blank"><img src="../images/twitter.png" alt="Twitter" /></a>
+        &nbsp;
+        <a href="https://facebook.com/blake.trebelhorn" target="_blank"><img src="../images/facebook.png" alt="Facebook" /></a>
+        &nbsp;
+        <a href="https://drake.edu" target="_blank"><img src="../images/drake.png" alt="Drake" /></a>
+        &nbsp;
+        <a href="https://github.com/BlakeTrebelhorn" target="_blank"><img src="../images/github.png" alt="GitHub" /></a>
+        <br /> Blake Trebelhorn
+    </footer>
+</body>
+</html>
