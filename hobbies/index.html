@@ -11,6 +11,10 @@
     <meta name="viewport" content="width=device-width; initial-scale=1; maximum-scale=1">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300" />
     <link rel="stylesheet" type="text/css" href="../assets/style.css">
+    <script src="https://code.jquery.com/jquery.min.js"></script>
+    <script>
+        window.jQuery || document.write('<script src="../assets/jquery.min.js"><\/script>');
+    </script>
     <script type="text/javascript" src="../assets/main.js"></script>
     <script type="text/javascript">
         var images = ["http://cdn.edgecast.steamstatic.com/steam/apps/292030/header.jpg?t=1509077015","http://cdn.edgecast.steamstatic.com/steam/apps/211420/header.jpg?t=1483694369","http://cdn.edgecast.steamstatic.com/steam/apps/200260/header.jpg?t=1461102763","http://cdn.edgecast.steamstatic.com/steam/apps/359550/header.jpg?t=1510567415","http://cdn.edgecast.steamstatic.com/steam/apps/8870/header.jpg?t=1486444091"];
@@ -60,20 +64,16 @@
 </head>
 
 <body>
-    <header>
-        <h1>
-            <a href="../index.html">Blake Trebelhorn</a>
-        </h1>
-    </header>
-    <nav>
-        <ul>
-            <!--https://css-tricks.com/fighting-the-space-between-inline-block-elements/ -->
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="../hobbies/index.html" class="active">Hobbies</a></li>
-            <li><a href="../contact/index.html">Contact</a></li>
-            <li><a href="../resume/index.html">R&eacute;sum&eacute;</a></li>
-        </ul>
-    </nav>
+    <!--Header-->
+    <div id="header-placeholder"></div>
+    <!--end Header-->
+    <!--Navigation bar-->
+    <div id="nav-placeholder"></div>
+    <script>
+        $(document).ready(loadBar());
+
+    </script>
+    <!--end of Navigation bar-->
     <section>
         <h2>Hobbies</h2>
         <a id="top"></a> Some of my interests include:
@@ -135,15 +135,7 @@
         <br />
         <a href="#top">Return to the top</a>
     </section>
-    <footer>
-        <a href="https://twitter.com/TrebelMaker" target="_blank"><img src="../assets/images/twitter.png" alt="Twitter" /></a> &nbsp;
-        <a href="https://facebook.com/blake.trebelhorn" target="_blank"><img src="../assets/images/facebook.png" alt="Facebook" /></a> &nbsp;
-        <a href="https://drake.edu" target="_blank"><img src="../assets/images/drake.png" alt="Drake" /></a> &nbsp;
-        <a href="https://github.com/BlakeTrebelhorn" target="_blank"><img src="../assets/images/github.png" alt="GitHub" /></a>
-        <a href="https://validator.w3.org/check?url=referer" target="_blank"><img src="https://validator.w3.org/images/HTML5_Badge_32.png" alt="HTML Icon" /></a>
-        <a href="https://jigsaw.w3.org/css-validator/check?url=referer" target="_blank"><img src="https://www.w3.org/Icons/valid-css" style="width: auto" alt="CSS Icon" /></a>
-        <br /> Blake Trebelhorn
-    </footer>
+<div id="footer-placeholder"></div>
 </body>
 
 </html>
