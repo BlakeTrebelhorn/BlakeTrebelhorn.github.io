@@ -1,0 +1,139 @@
+<!-- This is my resume page -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Projects | Blake Trebelhorn</title>
+    <meta name="description" content="Blake Trebelhorn's Projects" />
+    <meta name="author" content="Blake Trebelhorn" />
+    <meta name="keywords" content="projects, Blake Trebelhorn projects" />
+    <meta name="viewport" content="width=device-width; initial-scale=1; maximum-scale=1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300" />
+    <link rel="stylesheet" type="text/css" href="../assets/style.css">
+    <script src="https://code.jquery.com/jquery.min.js"></script>
+    <script>
+        window.jQuery || document.write('<script src="../assets/jquery.min.js"><\/script>');
+    </script>
+    <script src="../assets/main.js"></script>
+    <!-- Global Site Tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-107918307-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-107918307-1');
+    </script>
+
+    <style type="text/css">
+        section {
+            /*            text-align: center;*/
+            position: relative;
+            overflow: auto;
+        }
+
+        @media screen and (max-width: 515px) {
+            iframe {
+                height: 65vh;
+            }
+        }
+
+        .it {
+            font-style: italic;
+            float: right;
+        }
+
+        .alignleft {
+            float: left;
+        }
+
+        .alignright {
+            float: right;
+        }
+
+        .proj {
+            text-align: center;
+            max-width: 1336px;
+            width: 80%;
+            margin: auto;
+            margin-top: 20px;
+            padding: 10px 20px;
+            border-radius: 5px;
+            display: table;
+            border-radius: 5px;
+            background-color: #f2f2f2;
+        }
+
+        .clearToLeft {
+            clear: both;
+            text-align: left;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!--Header-->
+    <div id="header-placeholder"></div>
+    <!--end Header-->
+    <!--Navigation bar-->
+    <div id="nav-placeholder"></div>
+    <script>
+        $(document).ready(loadBar());
+    </script>
+    <!--end of Navigation bar-->
+    <section>
+        <h1 style="text-align: center">Projects</h1>
+        <div class="proj">
+            <h3 class="alignleft">Senior Project</h3>
+            <p class="alignright">Spring 2018</p>
+            <ul class="clearToLeft">
+                <li>Design and implement website to predict Pok&eacute;mon types</li>
+                <li>Build model in Keras using Python that learns on Pok&eacute; images</li>
+            </ul>
+        </div>
+        <div class="proj">
+            <h3 class="alignleft">The Legend of Griff</h3>
+            <p class="alignright">Fall 2017 - Present</p>
+            <ul class="clearToLeft">
+                <li>Develop Drake's campus in Solarus engine</li>
+                <li>Work with a team to develop different parts of the project</li>
+                <li>Use GIMP and LUA to create environment and game design</li>
+            </ul>
+        </div>
+        <div class="proj">
+            <h3 class="alignleft"><a href="https://github.com/BlakeTrebelhorn/MouseReset" target="_blank">Mouse Reset</a></h3>
+            <p class="alignright">March 2017</p>
+            <ul class="clearToLeft">
+                <li>Built Python script that resets the mouse to the center of the screen</li>
+                <li>Made for kids with cognitive disabilities that would continue to click in the same position after the mouse was set</li>
+                <li>Deployed in a Middle School environment</li>
+            </ul>
+        </div>
+        <div class="proj">
+            <h3 class="alignleft"><a href="https://github.com/BlakeTrebelhorn/Dota2Learning" target="_blank">Dota 2 Learning</a></h3>
+            <p class="alignright">January 2017</p>
+            <ul class="clearToLeft">
+                <li>Conducted machine learning on data from the Dota 2 videogame</li>
+                <li>Used Python and Scikit-Learn</li>
+                <li>Concluded the game was well-balanced in terms of picking heroes</li>
+            </ul>
+        </div>
+        <div class="proj">
+            <h3 class="alignleft">Spam Texts Model</h3>
+            <p class="alignright">December 2016</p>
+            <ul class="clearToLeft">
+                <li>Conducted machine learning on <a href="https://www.kaggle.com/uciml/sms-spam-collection-dataset">spam data</a></li>
+                <li>Used Python and Scikit-Learn</li>
+                <li>Achieved 98% accuracy</li>
+            </ul>
+        </div>
+    </section>
+    <div id="footer-placeholder"></div>
+</body>
+
+</html>
