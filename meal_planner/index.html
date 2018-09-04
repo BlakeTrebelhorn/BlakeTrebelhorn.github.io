@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Blake Trebelhorn | My Website</title>
+    <meta name="description" content="Blake Trebelhorn's Landing Page" />
+    <meta name="author" content="Blake Trebelhorn" />
+    <meta name="keywords" content="Blake Trebelhorn, Trebelhorn" />
+    <meta name="viewport" content="width=device-width; initial-scale=1; maximum-scale=1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300" />
+    <link rel="stylesheet" type="text/css" href="../assets/style.css" />
+    <script src="https://code.jquery.com/jquery.min.js"></script>
+    <script>
+        window.jQuery || document.write('<script src="../assets/jquery.min.js"><\/script>');
+
+    </script>
+    <script type="text/javascript" src="../assets/main.js"></script>
+    <!-- Global Site Tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-107918307-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-107918307-1');
+    </script>
+    <script>
+        function run() {
+            var whichSelected = [];
+            $.each($('input:checked'), function(a, b) {
+                whichSelected.push($(b).val());
+            });
+            var week = [];
+            for(i=0;i<7;i++) {
+                week[i] = whichSelected[Math.floor(Math.random() * whichSelected.length)];
+                $('#'+i).html(week[i]);
+            }
+
+        }
+
+        function setVal(obj, id) {
+            $('#'+id).val($(obj).val());
+        }
+    </script>
+
+    <style>
+        .box ul {
+            display: table;
+            margin-left: 0;
+            margin-bottom: 15px;
+            padding-left: 0;
+            list-style: none;
+        }
+
+        .box ul li {
+            padding: 2px 0 2px 0;
+        }
+
+        .box {
+            max-width: 1336px;
+            width: 80%;
+            margin: auto;
+            margin-top: 20px;
+            padding: 10px 20px;
+            border-radius: 5px;
+            display: table;
+            border-radius: 5px;
+            background-color: #f2f2f2;
+        }
+
+        .button {
+            color: white;
+            padding: 12px 30px;
+            border-radius: 5px;
+            background-color: #4CAF50;
+            border: none;
+            font-size: 16px;
+            margin: -5px auto 10px auto;
+        }
+
+        .button:hover {
+            background-color: #388E3C;
+        }
+
+        .left {
+            text-align: left;
+        }
+
+        .right {
+            text-align: right;
+        }
+
+        table {
+            border: 1px solid #ccc;
+            border-collapse: collapse;
+            margin: 0 auto 0 auto;
+            padding: 0;
+            width: 100%;
+            table-layout: fixed;
+            max-width: 750px;
+        }
+
+        table caption {
+            font-size: 1.5em;
+            margin: .5em 0 .75em;
+        }
+
+        table tr {
+            background-color: #f8f8f8;
+            border: 1px solid #ddd;
+            padding: .35em;
+        }
+
+        table th,
+        table td {
+            padding: .625em;
+            text-align: left;
+        }
+
+        table th, td {
+          font-size: .85em;
+          letter-spacing: .1em;
+          text-transform: uppercase;
+        }
+
+        table td:empty {
+            position: relative;
+        }
+
+        table td:empty:before {
+            color: #808080;
+            content: "cuisine";
+        }
+
+        @media screen and (max-width: 600px) {
+            table {
+                border: 0;
+            }
+
+            table caption {
+                font-size: 1.3em;
+            }
+
+            table thead {
+                border: none;
+                clip: rect(0 0 0 0);
+                height: 1px;
+                margin: -1px;
+                overflow: hidden;
+                padding: 0;
+                position: absolute;
+                width: 1px;
+            }
+
+            table tr {
+                border-bottom: 3px solid #ddd;
+/*                display: block;*/
+                margin-bottom: .625em;
+            }
+
+            table td, table th {
+/*                display: block;*/
+                font-size: .8em;
+                text-align: left;
+                width: 50%;
+                padding: 1em;
+
+            }
+
+            table td::before {
+                content: attr(data-label);
+                font-weight: bold;
+                text-transform: uppercase;
+            }
+
+            table td:last-child {
+                border-bottom: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!--Header-->
+    <div id="header-placeholder"></div>
+    <!--end Header-->
+    <!--Navigation bar-->
+    <div id="nav-placeholder"></div>
+    <script>
+        $(document).ready(loadBar());
+    </script>
+    <!--end of Navigation bar-->
+    <section>
+        <div class="box">
+            <div class="container">
+                <ul>
+                    <li><input id="american" value="American" type="checkbox">American</li>
+                    <li><input id="chinese" value="Chinese" type="checkbox">Chinese</li>
+                    <li><input id="italian" value="Italian" type="checkbox">Italian</li>
+                    <li><input id="mexican" value="Mexican" type="checkbox">Mexican</li>
+                    <li><input id="other" type="checkbox">Other: <input id="otherText" type="text" onblur="setVal(this,'other')"></li>
+                </ul>
+            </div>
+            <button class="button" onclick="run()">Run</button>
+            <div class="week">
+                <table>
+                    <tr>
+                        <th class="left">Day</th>
+                        <th class="right">Cuisine</th>
+                    <tr>
+                        <th class="left">Monday</th>
+                        <td id="0" class="right"></td>
+                    </tr>
+                    <tr>
+                        <th class="left">Tuesday</th>
+                        <td id="1" class="right"></td>
+                    </tr>
+                    <tr>
+                        <th class="left">Wednesday</th>
+                        <td id="2" class="right"></td>
+                    <tr>
+                        <th class="left">Thursday</th>
+                        <td id="3" class="right"></td>
+                    </tr>
+                    <tr>
+                        <th class="left">Friday</th>
+                        <td id="4" class="right"></td>
+                    </tr>
+                    <tr>
+                        <th class="left">Saturday</th>
+                        <td id="5" class="right"></td>
+                    </tr>
+                    <tr>
+                        <th class="left">Sunday</th>
+                        <td id="6" class="right"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <div id="footer-placeholder"></div>
+</body>
+
+</html>
