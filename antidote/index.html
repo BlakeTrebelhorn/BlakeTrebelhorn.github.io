@@ -1,0 +1,151 @@
+<!-- This is my hobby page -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Hobbies | Blake Trebelhorn</title>
+    <meta name="description" content="Hobbies" />
+    <meta name="author" content="Blake Trebelhorn" />
+    <meta name="keywords" content="hobbies, Blake Trebelhorn Hobbies" />
+    <meta name="viewport" content="width=device-width; initial-scale=1; maximum-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <!-- Global Site Tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-107918307-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-107918307-1');
+
+        function resetAll() {
+            $('[id^="antidote_"]').each(function() {
+               $(this).removeClass("bg-danger bg-warning");
+            });
+        }
+
+        function cycleClass(id) {
+            if ($('#' + id).hasClass('bg-danger')) {
+                $('#' + id).removeClass('bg-danger').addClass('bg-warning');
+            } else if ($('#' + id).hasClass('bg-warning')) {
+                $('#' + id).removeClass('bg-warning');
+            } else {
+                $('#' + id).addClass('bg-danger');
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="text-center mb-1 mt-1">
+            <button type="button" class="btn btn-danger" onclick="resetAll();">Reset</button>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-auto mb-3">
+                <div class="card" style="width: 18rem;" id="antidote_serum_n" onclick="cycleClass('antidote_serum_n')">
+                    <div class="card-body">
+                        <img class="card-img-top img-fluid" src="../assets/images/drake.png" alt="Serum-N">
+                        <h5 class="card-title text-center">Serum-N</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-auto mb-3">
+                <div class="card" style="width: 18rem;" id="antidote_oslers_oil" onclick="cycleClass('antidote_oslers_oil')">
+                    <div class="card-body">
+                        <img class="card-img-top img-fluid" src="../assets/images/drake.png" alt="Osler's Oil">
+                        <h5 class="card-title text-center">Osler's Oil</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-auto mb-3">
+                <div class="card" style="width: 18rem;" id="antidote_rubiximab" onclick="cycleClass('antidote_rubiximab')">
+                    <div class="card-body">
+                        <img class="card-img-top img-fluid" src="../assets/images/drake.png" alt="Rubixima">
+                        <h5 class="card-title text-center">Rubiximab</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-auto mb-3">
+                <div class="card" style="width: 18rem;" id="antidote_bootheide" onclick="cycleClass('antidote_bootheide')">
+                    <div class="card-body">
+                        <img class="card-img-top img-fluid" src="../assets/images/drake.png" alt="Bootheide">
+                        <h5 class="card-title text-center">Bootheide</h5>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-auto mb-3">
+                <div class="card" style="width: 18rem;" id="antidote_w2rose" onclick="cycleClass('antidote_w2rose')">
+                    <div class="card-body">
+                        <img class="card-img-top img-fluid" src="../assets/images/drake.png" alt="W2 Rose">
+                        <h5 class="card-title text-center">W&sup2;Rose</h5>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-auto mb-3">
+                <div class="card" style="width: 18rem;" id="antidote_mx_vile" onclick="cycleClass('antidote_mx_vile')">
+                    <div class="card-body">
+                        <img class="card-img-top img-fluid" src="../assets/images/drake.png" alt="Mx-Vile">
+                        <h5 class="card-title text-center">Mx-Vile</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-auto mb-3">
+                <div class="card" style="width: 18rem;" id="antidote_c9_tonic" onclick="cycleClass('antidote_c9_tonic')">
+                    <div class="card-body">
+                        <img class="card-img-top img-fluid" src="../assets/images/drake.png" alt="C9-Tonic">
+                        <h5 class="card-title text-center">C9-Tonic</h5>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-auto mb-3">
+                <div class="card" style="width: 18rem;" id="antidote_agent_u" onclick="cycleClass('antidote_agent_u')">
+                    <div class="card-body">
+                        <img class="card-img-top img-fluid" src="../assets/images/drake.png" alt="Agent-U">
+                        <h5 class="card-title text-center">Agent-U</h5>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-auto mb-3">
+                <div class="card" style="width: 18rem;" id="antidote_betelgeuse" onclick="cycleClass('antidote_betelgeuse')">
+                    <div class="card-body">
+                        <img class="card-img-top img-fluid" src="../assets/images/drake.png" alt="Betelgeuse">
+                        <h5 class="card-title text-center">Betelgeuse</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-auto mb-3">
+                <div class="card" style="width: 18rem;" id="antidote_elixer_q" onclick="cycleClass('antidote_elixer_q')">
+                    <div class="card-body">
+                        <img class="card-img-top img-fluid" src="../assets/images/drake.png" alt="Elixer-Q">
+                        <h5 class="card-title text-center">Elixer-Q</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
