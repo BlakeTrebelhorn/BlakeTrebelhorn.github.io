@@ -40,6 +40,16 @@
                 $('#' + id).addClass('bg-danger');
             }
         }
+
+        function resizeLast() {
+            $("#antidote_elixer_q").css({
+                'width': ($("#antidote_agent_u").width() + 'px')
+            });
+        }
+
+        $(document).ready(function() {
+            resizeLast();
+        });
     </script>
     <style>
         .card-title {
@@ -82,7 +92,7 @@
     </style>
 </head>
 
-<body>
+<body onresize="resizeLast();">
 
     <div class="container">
         <div class="text-center mb-1 mt-1">
