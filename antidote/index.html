@@ -41,6 +41,45 @@
             }
         }
     </script>
+    <style>
+        .card-title {
+            margin-left: -1rem;
+            margin-right: -1rem;
+            margin-top: 1rem;
+        }
+        @media (min-width: 0px) {
+            .card-deck {
+                -ms-flex-flow:row wrap;
+                flex-flow: row wrap;
+            }
+
+            .card-deck .card {
+                display: -ms-flexbox;
+                display: flex;
+                -ms-flex: 1 0 0%;
+                flex: 1 0 0%;
+                -ms-flex-direction: column;
+                flex-direction: column;
+                margin-right: 5px;
+                margin-bottom: 5px;
+                margin-left: 5px
+            }
+        }
+        html { font-size: 1rem; }
+
+        @media (min-width: 576px) {
+            html { font-size: 1.25rem; }
+        }
+        @media (min-width: 768px) {
+            html { font-size: 1.5rem; }
+        }
+        @media (min-width: 992px) {
+            html { font-size: 1.75rem; }
+        }
+        @media (min-width: 1200px) {
+            html { font-size: 2rem; }
+        }
+    </style>
 </head>
 
 <body>
@@ -49,94 +88,76 @@
         <div class="text-center mb-1 mt-1">
             <button type="button" class="btn btn-danger" onclick="resetAll();">Reset</button>
         </div>
-        <div class="row justify-content-center">
-            <div class="col-auto mb-3">
-                <div class="card" style="width: 18rem;" id="antidote_serum_n" onclick="cycleClass('antidote_serum_n')">
+        <div class="card-deck justify-content-center">
+            <div class="row">
+                <div class="card" id="antidote_serum_n" onclick="cycleClass('antidote_serum_n')">
                     <div class="card-body">
                         <img class="card-img-top img-fluid" src="../assets/images/drake.png" alt="Serum-N">
                         <h5 class="card-title text-center">Serum-N</h5>
                     </div>
                 </div>
-            </div>
-            <div class="col-auto mb-3">
-                <div class="card" style="width: 18rem;" id="antidote_oslers_oil" onclick="cycleClass('antidote_oslers_oil')">
+                <div class="card" id="antidote_oslers_oil" onclick="cycleClass('antidote_oslers_oil')">
                     <div class="card-body">
                         <img class="card-img-top img-fluid" src="../assets/images/drake.png" alt="Osler's Oil">
                         <h5 class="card-title text-center">Osler's Oil</h5>
                     </div>
                 </div>
-            </div>
-            <div class="col-auto mb-3">
-                <div class="card" style="width: 18rem;" id="antidote_rubiximab" onclick="cycleClass('antidote_rubiximab')">
+                <div class="card" id="antidote_rubiximab" onclick="cycleClass('antidote_rubiximab')">
                     <div class="card-body">
                         <img class="card-img-top img-fluid" src="../assets/images/drake.png" alt="Rubixima">
                         <h5 class="card-title text-center">Rubiximab</h5>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <div class="row justify-content-center">
-            <div class="col-auto mb-3">
-                <div class="card" style="width: 18rem;" id="antidote_bootheide" onclick="cycleClass('antidote_bootheide')">
+            <div class="row">
+                <div class="card" id="antidote_bootheide" onclick="cycleClass('antidote_bootheide')">
                     <div class="card-body">
                         <img class="card-img-top img-fluid" src="../assets/images/drake.png" alt="Bootheide">
                         <h5 class="card-title text-center">Bootheide</h5>
                     </div>
                 </div>
-            </div>
 
-            <div class="col-auto mb-3">
-                <div class="card" style="width: 18rem;" id="antidote_w2rose" onclick="cycleClass('antidote_w2rose')">
+                <div class="card" id="antidote_w2rose" onclick="cycleClass('antidote_w2rose')">
                     <div class="card-body">
                         <img class="card-img-top img-fluid" src="../assets/images/drake.png" alt="W2 Rose">
                         <h5 class="card-title text-center">W&sup2;Rose</h5>
                     </div>
                 </div>
-            </div>
 
-            <div class="col-auto mb-3">
-                <div class="card" style="width: 18rem;" id="antidote_mx_vile" onclick="cycleClass('antidote_mx_vile')">
+                <div class="card" id="antidote_mx_vile" onclick="cycleClass('antidote_mx_vile')">
                     <div class="card-body">
                         <img class="card-img-top img-fluid" src="../assets/images/drake.png" alt="Mx-Vile">
                         <h5 class="card-title text-center">Mx-Vile</h5>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <div class="row justify-content-center">
-            <div class="col-auto mb-3">
-                <div class="card" style="width: 18rem;" id="antidote_c9_tonic" onclick="cycleClass('antidote_c9_tonic')">
+            <div class="row">
+                <div class="card" id="antidote_c9_tonic" onclick="cycleClass('antidote_c9_tonic')">
                     <div class="card-body">
                         <img class="card-img-top img-fluid" src="../assets/images/drake.png" alt="C9-Tonic">
                         <h5 class="card-title text-center">C9-Tonic</h5>
                     </div>
                 </div>
-            </div>
 
-            <div class="col-auto mb-3">
-                <div class="card" style="width: 18rem;" id="antidote_agent_u" onclick="cycleClass('antidote_agent_u')">
+                <div class="card" id="antidote_agent_u" onclick="cycleClass('antidote_agent_u')">
                     <div class="card-body">
                         <img class="card-img-top img-fluid" src="../assets/images/drake.png" alt="Agent-U">
                         <h5 class="card-title text-center">Agent-U</h5>
                     </div>
                 </div>
-            </div>
 
-            <div class="col-auto mb-3">
-                <div class="card" style="width: 18rem;" id="antidote_betelgeuse" onclick="cycleClass('antidote_betelgeuse')">
+                <div class="card" id="antidote_betelgeuse" onclick="cycleClass('antidote_betelgeuse')">
                     <div class="card-body">
                         <img class="card-img-top img-fluid" src="../assets/images/drake.png" alt="Betelgeuse">
                         <h5 class="card-title text-center">Betelgeuse</h5>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <div class="row justify-content-center">
-            <div class="col-auto mb-3">
-                <div class="card" style="width: 18rem;" id="antidote_elixer_q" onclick="cycleClass('antidote_elixer_q')">
+            <div class="row">
+                <div class="card" id="antidote_elixer_q" onclick="cycleClass('antidote_elixer_q')">
                     <div class="card-body">
                         <img class="card-img-top img-fluid" src="../assets/images/drake.png" alt="Elixer-Q">
                         <h5 class="card-title text-center">Elixer-Q</h5>
