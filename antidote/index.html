@@ -27,17 +27,17 @@
 
         function resetAll() {
             $('[id^="antidote_"]').each(function() {
-               $(this).removeClass("bg-danger bg-warning");
+               $(this).removeClass("bg-secondary bg-warning");
             });
         }
 
         function cycleClass(id) {
-            if ($('#' + id).hasClass('bg-danger')) {
-                $('#' + id).removeClass('bg-danger').addClass('bg-warning');
+            if ($('#' + id).hasClass('bg-secondary')) {
+                $('#' + id).removeClass('bg-secondary').addClass('bg-warning');
             } else if ($('#' + id).hasClass('bg-warning')) {
                 $('#' + id).removeClass('bg-warning');
             } else {
-                $('#' + id).addClass('bg-danger');
+                $('#' + id).addClass('bg-secondary');
             }
         }
 
@@ -169,7 +169,7 @@
 
             <div class="row">
                 <div class="card" id="antidote_elixer_q" onclick="cycleClass('antidote_elixer_q')">
-                    <img class="card-img-top img-fluid" src="../assets/images/antidote/elixer_q.png" alt="Elixer-Q">
+                    <img class="card-img-top img-fluid" src="../assets/images/antidote/elixer_q.png" alt="Elixer-Q" onload="resizeLast();">
                     <div class="card-body">
                         <h5 class="card-title text-center">Elixer-Q</h5>
                     </div>
