@@ -1,91 +1,175 @@
-<!-- This is Blake Trebelhorn's home page -->
-<!-- My inline css style is at the beginning of my body section -->
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <title>Blake Trebelhorn | My Website</title>
-    <meta name="description" content="Blake Trebelhorn's Landing Page" />
-    <meta name="author" content="Blake Trebelhorn" />
-    <meta name="keywords" content="Blake Trebelhorn, Trebelhorn" />
-    <meta name="viewport" content="width=device-width; initial-scale=1; maximum-scale=1">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300" />
-    <link rel="stylesheet" type="text/css" href="assets/style.css" />
-    <script src="https://code.jquery.com/jquery.min.js"></script>
-    <script>
-        window.jQuery || document.write('<script src="../assets/jquery.min.js"><\/script>');
-    </script>
-    <script type="text/javascript" src="assets/main.js"></script>
-    <!-- Global Site Tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-107918307-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
 
-        gtag('config', 'UA-107918307-1');
-
-    </script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <title>Blake Trebelhorn</title>
 
     <style>
-        div {
-            /* to center align my image/text */
-            text-align: center;
+        .card {
+            margin-bottom: 15px;
         }
-
-        body p {
-            box-shadow: #D8D8D8 .5em .5em .5em;
-            padding: .25em;
-            border-radius: .5em;
-        }
-
     </style>
 </head>
 
 <body>
-    <!--Header-->
-    <div id="header-placeholder"></div>
-    <!--end Header-->
-    <!--Navigation bar-->
-    <div id="nav-placeholder"></div>
-    <script>
-        $(document).ready(loadBar());
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <a class="navbar-brand" href="#">Blake Trebelhorn</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-    </script>
-    <!--end of Navigation bar-->
-    <section>
-        <div>
-            <h2 style="font-weight: 500">About Me</h2>
-            <!-- bolden font just a bit (using 300 as default) -->
-            <div class="flip-container">
-                <div class="flipper">
-                    <div class="front">
-                        <img src="assets/images/circle_me.png" alt="A Picture of Me" />
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto" data-toggle="collapse" data-target=".navbar-collapse.show">
+                <li class="nav-item">
+                    <a class="nav-link" href="#home">About me</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#projects">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/resume/websiteResume.pdf" target="_blank">Resum&eacute;</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Extras
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="/meal_planner/index.html">Mealplanner</a>
+                        <a class="dropdown-item" href="/antidote/index.html">Antidote</a>
                     </div>
-                    <div class="back" style="width: 284px; height: 284px;">
-                        <p style="position: relative; top: 45%; transform: translateY(-55%); box-shadow: none;">
-                            <img src="assets/images/BlakeTrebelhorn.png" alt="My Identicon" />
-                        </p>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div id="home" style="margin-bottom: 15px" />
+    <div class="container">
+        <div class="jumbotron">
+            <h1 class="display-4">Hello, world!</h1>
+            <p class="lead">I'm Blake Trebelhorn, a recent grad and full-time full stack developer.</p>
+            <hr class="my-4">
+            <p class="lead">Learn a little bit about me and my interests:</p>
+<!--            <h2>Some of my interests</h2>-->
+            <div class="row">
+                <div class="col-4">
+                    <div class="list-group" id="list-tab" role="tablist">
+                        <a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="list" href="#list-programming" role="tab" aria-controls="programming">Computer Programming</a>
+                        <a class="list-group-item list-group-item-action" id="list-linux-list" data-toggle="list" href="#list-linux" role="tab" aria-controls="linux">GNU/Linux</a>
+                        <a class="list-group-item list-group-item-action" id="list-building-list" data-toggle="list" href="#list-building" role="tab" aria-controls="building">Building computers</a>
+                        <a class="list-group-item list-group-item-action" id="list-printing-list" data-toggle="list" href="#list-printing" role="tab" aria-controls="printing">3D Printing</a>
+                        <a class="list-group-item list-group-item-action" id="list-scouting-list" data-toggle="list" href="#list-scouting" role="tab" aria-controls="scouting">Boy Scouting</a>
+                        <a class="list-group-item list-group-item-action" id="list-martialarts-list" data-toggle="list" href="#list-martialarts" role="tab" aria-controls="martialarts">Martial Arts</a>
+                        <a class="list-group-item list-group-item-action" id="list-gaming-list" data-toggle="list" href="#list-gaming" role="tab" aria-controls="gaming">Gaming</a>
+                    </div>
+                </div>
+                <div class="col-8">
+                    <div class="tab-content" id="nav-tabContent">
+                        <div class="tab-pane fade show active" id="list-programming" role="tabpanel" aria-labelledby="list-programming-list">I started playing with technology in my middle school years when I first got an iPod touch. I wanted more out of the device, so I looked into how I could do that. I learned about Jailbreaking and went from there. My interest in technology continued to grow, so I sought out a formal education. Fast forward to today where I've graduated, and work as a full stack developer, and love my job.</div>
+                        <div class="tab-pane fade" id="list-linux" role="tabpanel" aria-labelledby="list-linux-list">If I had a choice, I'd use GNU/Linux for everything. I spend the last 2 years of college solely using Ubuntu on my laptop. I plan to continue exploring different distros, partially because I love setting up a new system.</div>
+                        <div class="tab-pane fade" id="list-building" role="tabpanel" aria-labelledby="list-building-list">One of my hobbies is building computers. I built my first computer when I was 17, and have built computers for my friends, family, and even University since.</div>
+                        <div class="tab-pane fade" id="list-printing" role="tabpanel" aria-labelledby="list-printing-list">...</div>
+                        <div class="tab-pane fade" id="list-scouting" role="tabpanel" aria-labelledby="list-scouting-list">I initially started my Boy Scouts career in Kindergarten. I joined alongside my best friend, whom I still talk to every weekend. While in Cub Scouts, the lower section of Boy Scouts, I enjoyed learning many valuable skills. I moved up through the ranks of Cub Scouts each school year unti I reached Tenderfoot, the first rank of Boy Scouts. Boy Scouting offered much more that Cub Scouting did. Some of my favorite memories include a summer of biking which ended with a 50 mile ride in a single day. Another one is going on a weeklong camp each year with all of my friends, where we swam, climbed, cooked, and much more. One of the coolest things we did was camp in sub-zero temperatures for 24 hours, which included sleeping in an igloo we made ourselves. My greatest achievement in Scouting was attaining the rank of Eagle Scout, which is an honor only 4% of Boy Scouts receive. One of the requirements for an Eagle Scout is planning and carrying out a community service project. I designed and raised funds for a new dock at the local nature reserve. The original one was over 30 years old and was sinking into the ground. The dock I designed is larger and has a bench around &frac34; of the structure.</div>
+                        <div class="tab-pane fade" id="list-martialarts" role="tabpanel" aria-labelledby="list-martialarts-list">As a child I was always interested in martial arts. For my 8<sup>th</sup> birthday my parents signed me up for a TaeKwonDo class at the rec center. I attended training two times a week with testing every few months to work my way up the ranks. I participated in tournaments where I fought, broke boards, and competed in forms; a sequence of moves in which you memorize. After 4 &frac12; years I achieved the rank of 1<sup>st</sup> dan blackbelt, the first of the 10 blackbelt ranks in TaeKwonDo.</div>
+                        <div class="tab-pane fade" id="list-gaming" role="tabpanel" aria-labelledby="list-gaming-list">...</div>
                     </div>
                 </div>
             </div>
         </div>
-        <p>
-            <b>Hello!</b> My name is Blake Trebelhorn and I am a senior student at Drake University. I am double majoring in Computer Science and Data Analytics with a minor in Mathematics. Currently, I am employed by Drake as a student IT technician for the college of Arts and Sciences. My past work experiences include another on-campus job working at the Drake IT help desk and a summer internship at Daikin Applied Americas. While interning for Daikin, I gained a deeper understanding for the Windows environment as well as analytical skills in data science.
-        </p>
-        <p>
-            One thing I love to do is toy with my computers and phone. Just about every week I'll have either (software) broken my phone or computer trying to fix or improve some aspect of it. Within a day (usually hours) I'll have it back up and running. I started playing with technology in my middle school years when I first got an iPod touch. I wanted more out of the device, so I looked into how I could do that. I learned about Jailbreaking and went from there. I started offering to Jailbreak my peer's iPods and iPhones. I eventually got an iPhone myself, and unfortunately cracked the screen like so many people do. I, however, tore the phone open and replaced the screen myself. Over the course of my high school years, I replaced a plethora of screens just from word of mouth.
-        </p>
-        <p>
-            I also fixed other systems, including Windows, macOS, Xbox, and PS4 systems. I purchased my own MacBook which I dual booted with Windows 7. I moved onto the Android ecosystem once Ice Cream Sandwich (4.0) was released. I haven't used an iPhone since, but still work with them nearly every day. Nowadays I only use Android phones, which I unlock and root as soon as I get them. The laptop I currently use I dual boot with Ubuntu, which has become my daily driver for all of my school work.
-        </p>
-    </section>
+    </div>
+<ul>
+            <li>Computer Programming</li>
+            <li>Scripting</li>
+            <li>GNU/Linux</li>
+            <li>Hardware hacking</li>
+            <ul>
+                <li>Raspberry Pi</li>
+                <li>Building computers</li>
+                <li>Restoring old machines</li>
+            </ul>
+            <li>Android Ecosystem</li>
+            <li>Cybersecurity</li>
+            <li>3D Printing</li>
+            <li><a href="#scouting">Boy Scouting</a></li>
+            <li><a href="#taekwondo">Martial Arts</a></li>
+            <li><a href="#gaming">Gaming</a></li>
+        </ul>
+    <div id="projects">
+        <h4>Projects</h4>
+    </div>
 
-<div id="footer-placeholder"></div>
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                <h5>Senior Project</h5>
+            </div>
+            <div class="card-body">
+                <li>Design and implement website to predict Pok&eacute;mon types</li>
+                <li>Build model in Keras using Python that learns on Pok&eacute; images</li>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">
+                <h5>The Legend of Griff</h5>
+            </div>
+            <div class="card-body">
+                <li>Develop Drake's campus in Solarus engine</li>
+                <li>Work with a team to develop different parts of the project</li>
+                <li>Use GIMP and LUA to create environment and game design</li>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">
+                <h5><a href="https://github.com/BlakeTrebelhorn/MouseReset" target="_blank">Mouse Reset</a></h5>
+            </div>
+            <div class="card-body">
+                <li>Built Python script that resets the mouse to the center of the screen</li>
+                <li>Made for kids with cognitive disabilities that would continue to click in the same position after the mouse was set</li>
+                <li>Deployed in a Middle School environment</li>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">
+                <h5><a href="https://github.com/BlakeTrebelhorn/Dota2Learning" target="_blank">Dota 2 Learning</a></h5>
+            </div>
+            <div class="card-body">
+                <li>Conducted machine learning on data from the Dota 2 videogame</li>
+                <li>Used Python and Scikit-Learn</li>
+                <li>Concluded the game was well-balanced in terms of picking heroes</li>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">
+                <h5>Spam Texts Model</h5>
+            </div>
+            <div class="card-body">
+                <li>Conducted machine learning on <a href="https://www.kaggle.com/uciml/sms-spam-collection-dataset">spam data</a></li>
+                <li>Used Python and Scikit-Learn</li>
+                <li>Achieved 98% accuracy</li>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">
+                <h5>Math Machine</h5>
+            </div>
+            <div class="card-body">
+                <li>Attended Iowa State University Hackathon</li>
+                <li>Built Android app in 36 hours with no prior knowledge</li>
+                <li>Utilized Git with team members</li>
+            </div>
+        </div>
+    </div>
+
 </body>
 
 </html>
