@@ -17,6 +17,7 @@
         .card {
             margin-bottom: 15px;
         }
+
         .navbar {
             margin-bottom: 15px;
         }
@@ -26,6 +27,20 @@
 
         .carousel-control-next-icon {
             background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23f00' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
+        }
+
+        iframe {
+            height: 500px;
+            width: 100%;
+            display: block;
+            margin: 0 auto
+        }
+
+        @media (min-width: 768px) {
+            iframe {
+                height: 1005px;
+                width: 90%;
+            }
         }
     </style>
 </head>
@@ -172,7 +187,7 @@
             </div>
             <!-- Resume -->
             <div class="carousel-item">
-                <iframe src="http://docs.google.com/gview?url=http://blaketrebelhorn.me/resume/websiteResume.pdf&embedded=true" height="1005" style="width:90%; display: block; margin: 0 auto"></iframe>
+                <iframe src="http://docs.google.com/gview?url=http://blaketrebelhorn.me/resume/websiteResume.pdf&embedded=true"></iframe>
             </div>
         </div>
         <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
