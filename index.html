@@ -79,6 +79,16 @@
             </ul>
         </div>
     </nav>
+    <div class="container d-md-none">
+        <a class="float-left" href="" role="button" onclick="$('#carousel').carousel('prev')">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="float-right" href="" role="button" onclick="$('#carousel').carousel('next')">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
     <!-- Carousel -->
     <div id="carousel" class="carousel slide" data-interval="false">
         <div class="carousel-inner">
@@ -188,21 +198,21 @@
             </div>
             <!-- Resume -->
             <div class="carousel-item">
-                <iframe src="http://docs.google.com/gview?url=http://blaketrebelhorn.me/resume/websiteResume.pdf&embedded=true"></iframe>
+                <iframe src="http://docs.google.com/gview?url=http://blaketrebelhorn.github.io/resume/websiteResume.pdf&embedded=true"></iframe>
             </div>
         </div>
-        <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
+        <a class="carousel-control-prev d-none d-sm-flex" href="#carousel" role="button" data-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="sr-only">Previous</span>
         </a>
-        <a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
+        <a class="carousel-control-next d-none d-sm-flex" href="#carousel" role="button" data-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="sr-only">Next</span>
         </a>
     </div>
 
     <!-- Modal -->
-    <div class="modal fade" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal fade" id="contactModal" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
