@@ -1,199 +1,231 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8" />
-    <title>Blake Trebelhorn | My Website</title>
-    <meta name="description" content="Blake Trebelhorn's Landing Page" />
-    <meta name="author" content="Blake Trebelhorn" />
-    <meta name="keywords" content="Blake Trebelhorn, Trebelhorn" />
-    <meta name="viewport" content="width=device-width; initial-scale=1; maximum-scale=1">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300" />
-    <!--    <link rel="stylesheet" type="text/css" href="../assets/style.css" />-->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
-    <!--    <script type="text/javascript" src="../assets/main.js"></script>-->
-    <script>
-        $(document).ready(function() {
-            if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-                $('[data-toggle="tooltip"]').tooltip();
-            }
-        })
-        var counter = 1;
-
-        function run() {
-            var noDupe = $('#noDupe').prop('checked');
-            var whichSelected = [];
-            $.each($('#cuisineList input:checked'), function(a, b) {
-                whichSelected.push($(b).val());
-            });
-            var week = [];
-            for (i = 0; i < 7; i++) {
-                var tmpCuisine = whichSelected[Math.floor(Math.random() * whichSelected.length)];
-                debugger;
-                if (noDupe) {
-                    whichSelected.splice(whichSelected.indexOf(tmpCuisine), 1);
+    <head>
+        <meta charset="UTF-8" />
+        <title>Blake Trebelhorn | My Website</title>
+        <meta name="description" content="Blake Trebelhorn's Landing Page" />
+        <meta name="author" content="Blake Trebelhorn" />
+        <meta name="keywords" content="Blake Trebelhorn, Trebelhorn" />
+        <meta name="viewport" content="width=device-width; initial-scale=1; maximum-scale=1">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300" />
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+        <script>
+            $(document).ready(function() {
+                if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+                    $('[data-toggle="tooltip"]').tooltip();
                 }
-                week[i] = tmpCuisine;
-                $('#' + i).html(week[i]);
+            })
+            var counter = 1;
+
+            function run() {
+                var noDupe = $('#noDupe').prop('checked');
+                var whichSelected = [];
+                $.each($('#cuisineList input:checked'), function(a, b) {
+                    whichSelected.push($(b).val());
+                });
+                var week = [];
+                for (i = 0; i < 7; i++) {
+                    var tmpCuisine = whichSelected[Math.floor(Math.random() * whichSelected.length)];
+                    if (noDupe) {
+                        whichSelected.splice(whichSelected.indexOf(tmpCuisine), 1);
+                    }
+                    week[i] = tmpCuisine;
+                    $('#' + i).html(week[i]);
+                }
+
             }
 
-        }
+            function runFood() {
+                var noDupe = $('#noDupeFood').prop('checked');
+                var whichSelected = [...$('#foodList').val().split(new RegExp($('#delimGroup label[class*="active"] input').val()))];
+                var week = [];
+                for (i = 0; i < 7; i++) {
+                    var tmpCuisine = whichSelected[Math.floor(Math.random() * whichSelected.length)];
+                    if (noDupe) {
+                        whichSelected.splice(whichSelected.indexOf(tmpCuisine), 1);
+                    }
+                    week[i] = tmpCuisine;
+                    $('#' + i).html(week[i]);
+                }
 
-        function setVal(obj) {
-            $('#' + obj.id.substring(0, obj.id.indexOf('Text'))).val($(obj).val()).prop('checked', true);
-        }
+            }
 
-        function add() {
-            $('#cuisineList').append('<div class="form-check"><input id="other' + counter + '" type="checkbox"> Other ' + counter + ': <input id="other' + counter + 'Text" type="text" onblur="setVal(this)"></div>');
-            counter++;
-        }
-    </script>
+            function toggleInputMethod() {
+                if ($('#cuisineContainer').is(':visible')) {
+                    $('#cuisineContainer').hide();
+                    $('#foodContainer').show();
+                    $('.cuisine').removeClass('cuisine').addClass('food');
+                } else {
+                    $('#foodContainer').hide();
+                    $('#cuisineContainer').show();
+                    $('.food').removeClass('food').addClass('cuisine');
+                }
+                $('#switchBtn').toggleClass('food cuisine');
+            }
 
-    <style>
-        table {
-            border: 1px solid #ccc;
-        }
+            function setVal(obj) {
+                $('#' + obj.id.substring(0, obj.id.indexOf('Text'))).val($(obj).val()).prop('checked', true);
+            }
 
-        table th,
-        td {
-            letter-spacing: .05em;
-            text-transform: uppercase;
-        }
+            function add() {
+                $('#cuisineList').append('<div class="form-check"><input id="other' + counter + '" type="checkbox"> Other ' + counter + ': <input id="other' + counter + 'Text" type="text" onblur="setVal(this)"></div>');
+                counter++;
+            }
+        </script>
 
-        table td:empty:before {
-            color: #808080;
-            content: "cuisine";
-        }
-    </style>
-</head>
+        <style>
+            table {
+                border: 1px solid #ccc;
+            }
 
-<body>
-    <a class="" href="../index.html">Return to main site</a>
-    <div class="container">
-        <div id="cuisineList" class="mt-5">
-            <div class="form-check">
-                <input id="american" value="American" type="checkbox">
-                <label class="form-check-label" for="american">American</label>
+            table th,
+            td {
+                letter-spacing: .05em;
+                text-transform: uppercase;
+            }
+
+            table td.cuisine:empty:before {
+                color: #808080;
+                content: "cuisine";
+            }
+
+            table th.cuisine:before {
+                content: "cuisine";
+            }
+
+            table td.food:empty:before {
+                color: #808080;
+                content: "food";
+            }
+
+            table th.food:before {
+                content: "food";
+            }
+
+            .form-check {
+                padding-left: 0;
+            }
+
+            button.food:before {
+                content: "Food";
+            }
+
+            button.cuisine:before {
+                content: "Cuisine";
+            }
+        </style>
+    </head>
+
+    <body>
+        <a class="" href="../index.html">Return to main site</a>
+        <div class="container">
+            <div class="mt-2 mb-4">
+                <button id="switchBtn" class="btn btn-info food" onclick="toggleInputMethod()" />
             </div>
-            <div class="form-check">
-                <input id="chinese" value="Chinese" type="checkbox">
-                <label class="form-check-label" for="chinese">Chinese</label>
+            <div id="cuisineContainer">
+                <div id="cuisineList">
+                    <div class="form-check">
+                        <input id="american" value="American" type="checkbox">
+                        <label class="form-check-label" for="american">American</label>
+                    </div>
+                    <div class="form-check">
+                        <input id="chinese" value="Chinese" type="checkbox">
+                        <label class="form-check-label" for="chinese">Chinese</label>
+                    </div>
+                    <div class="form-check">
+                        <input id="italian" value="Italian" type="checkbox">
+                        <label class="form-check-label" for="italian">Italian</label>
+                    </div>
+                    <div class="form-check">
+                        <input id="mexican" value="Mexican" type="checkbox">
+                        <label class="form-check-label" for="mexican">Mexican</label>
+                    </div>
+                    <div class="form-check">
+                        <input id="other" type="checkbox"> Other: <input id="otherText" type="text" onblur="setVal(this)">
+                    </div>
+                </div>
+                <div class="form-check">
+                    <input id="noDupe" type="checkbox">
+                    <label class="form-check-label" for="noDupe" data-toggle="tooltip" data-placement="right" title="You will need at least 7 items for this to properly work">Don't Duplicate</label>
+                    <div class="d-sm-none text-muted">You will need at least 7 items for this to properly work</div>
+                </div>
+                <div class="btn-group mt-3 mb-5" role="group" aria-label="Basic example">
+                    <button class="btn btn-secondary" onclick="add()">Add Another</button>
+                    <button class="btn btn-primary" onclick="run()">Run</button>
+                </div>
             </div>
-            <div class="form-check">
-                <input id="italian" value="Italian" type="checkbox">
-                <label class="form-check-label" for="italian">Italian</label>
+            <div id="foodContainer" style="display: none">
+                <div class="form-group">
+                    <label for="foodList" class="text-muted">Enter a list of foods, then choose how it's separated and hit run.</label>
+                    <textarea class="form-control" id="foodList" rows="3"></textarea>
+                </div>
+                <div class="form-check">
+                    <input id="noDupeFood" type="checkbox">
+                    <label class="form-check-label" for="noDupeFood" data-toggle="tooltip" data-placement="right" title="You will need at least 7 items for this to properly work">Don't Duplicate</label>
+                    <div class="d-sm-none text-muted">You will need at least 7 items for this to properly work</div>
+                </div>
+                <div id="delimGroup" class="btn-group btn-group-toggle mt-3 mb-2" role="group" aria-label="Delimer Radio Group" data-toggle="buttons">
+                    <label for="newline" class="btn btn-secondary">
+                        <input type="radio" id="newline" value="\r?\n">
+                        Newline
+                    </label>
+                    <label for="comma" class="btn btn-secondary">
+                        <input type="radio" id="comma" value=",">
+                        Comma
+                    </label>
+                    <label for="tab" class="btn btn-secondary">
+                        <input type="radio" id="tab" value="\t">
+                        Tab
+                    </label>
+                </div>
+                <div class="mb-5">
+                    <button class="btn btn-primary" onclick="runFood()">Run</button>
+                </div>
             </div>
-            <div class="form-check">
-                <input id="mexican" value="Mexican" type="checkbox">
-                <label class="form-check-label" for="mexican">Mexican</label>
-            </div>
-            <div class="form-check">
-                <input id="other" type="checkbox"> Other: <input id="otherText" type="text" onblur="setVal(this)">
-            </div>
-        </div>
-        <div class="form-check">
-            <input id="noDupe" type="checkbox">
-            <label class="form-check-label" for="noDupe" data-toggle="tooltip" data-placement="right" title="You will need at least 7 items for this to properly work">Don't Duplicate</label>
-            <div class ="d-sm-none text-muted">You will need at least 7 items for this to properly work</div>
-        </div>
-        <div class="btn-group mt-3 mb-5" role="group" aria-label="Basic example">
-            <button class="btn btn-secondary" onclick="add()">Add Another</button>
-            <button class="btn btn-primary" onclick="run()">Run</button>
-        </div>
 
-        <div class="table-responsive">
-            <table class="table table-striped table-border">
-                <thead>
-                    <tr>
-                        <th>Day</th>
-                        <th class="text-right">Cuisine</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <th>Monday</th>
-                        <td id="0" class="text-right"></td>
-                    </tr>
-                    <tr>
-                        <th>Tuesday</th>
-                        <td id="1" class="text-right"></td>
-                    </tr>
-                    <tr>
-                        <th>Wednesday</th>
-                        <td id="2" class="text-right"></td>
-                    <tr>
-                        <th>Thursday</th>
-                        <td id="3" class="text-right"></td>
-                    </tr>
-                    <tr>
-                        <th>Friday</th>
-                        <td id="4" class="text-right"></td>
-                    </tr>
-                    <tr>
-                        <th>Saturday</th>
-                        <td id="5" class="text-right"></td>
-                    </tr>
-                    <tr>
-                        <th>Sunday</th>
-                        <td id="6" class="text-right"></td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </div>
-    <!--
-    <section>
-        <div class="box">
-            <div class="container">
-                <ul>
-                    <li><input id="american" value="American" type="checkbox">American</li>
-                    <li><input id="chinese" value="Chinese" type="checkbox">Chinese</li>
-                    <li><input id="italian" value="Italian" type="checkbox">Italian</li>
-                    <li><input id="mexican" value="Mexican" type="checkbox">Mexican</li>
-                    <li><input id="other" type="checkbox">Other: <input id="otherText" type="text" onblur="setVal(this,'other')"></li>
-                </ul>
-            </div>
-            <button class="button" onclick="run()">Run</button>
-            <div class="week">
-                <table>
-                    <tr>
-                        <th>Day</th>
-                        <th class="right">Cuisine</th>
-                    <tr>
-                        <th>Monday</th>
-                        <td id="0" class="right"></td>
-                    </tr>
-                    <tr>
-                        <th>Tuesday</th>
-                        <td id="1" class="right"></td>
-                    </tr>
-                    <tr>
-                        <th>Wednesday</th>
-                        <td id="2" class="right"></td>
-                    <tr>
-                        <th>Thursday</th>
-                        <td id="3" class="right"></td>
-                    </tr>
-                    <tr>
-                        <th>Friday</th>
-                        <td id="4" class="right"></td>
-                    </tr>
-                    <tr>
-                        <th>Saturday</th>
-                        <td id="5" class="right"></td>
-                    </tr>
-                    <tr>
-                        <th>Sunday</th>
-                        <td id="6" class="right"></td>
-                    </tr>
+            <div class="table-responsive">
+                <table class="table table-striped table-border">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th class="text-right cuisine"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>Monday</th>
+                            <td id="0" class="text-right cuisine"></td>
+                        </tr>
+                        <tr>
+                            <th>Tuesday</th>
+                            <td id="1" class="text-right cuisine"></td>
+                        </tr>
+                        <tr>
+                            <th>Wednesday</th>
+                            <td id="2" class="text-right cuisine"></td>
+                        <tr>
+                            <th>Thursday</th>
+                            <td id="3" class="text-right cuisine"></td>
+                        </tr>
+                        <tr>
+                            <th>Friday</th>
+                            <td id="4" class="text-right cuisine"></td>
+                        </tr>
+                        <tr>
+                            <th>Saturday</th>
+                            <td id="5" class="text-right cuisine"></td>
+                        </tr>
+                        <tr>
+                            <th>Sunday</th>
+                            <td id="6" class="text-right cuisine"></td>
+                        </tr>
+                    </tbody>
                 </table>
             </div>
         </div>
-    </section>
--->
-</body></html>
+    </body>
+</html>
