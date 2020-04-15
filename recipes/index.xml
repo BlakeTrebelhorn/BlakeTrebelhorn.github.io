@@ -1,0 +1,147 @@
+<?xml version="1.0"?>
+<!DOCTYPE Root [
+		<!ELEMENT Root (Recipes)*>
+		<!ELEMENT Recipes (Recipe)*>
+		<!ELEMENT Recipe (ID|Tags|Title|Ingredients|Instructions|Notes|Links)*>
+		<!ELEMENT ID (#PCDATA)>
+		<!ELEMENT Tags (Tag)*>
+		<!ELEMENT Tag (#PCDATA)>
+		<!ELEMENT Title (#PCDATA)>
+		<!ELEMENT Ingredients (Ingredient)*>
+		<!ELEMENT Ingredient (#PCDATA)>
+		<!ELEMENT Instructions (Instruction)*>
+		<!ELEMENT Instruction (#PCDATA)>
+		<!ELEMENT Notes (Note)*>
+		<!ELEMENT Note (#PCDATA)>
+		<!ELEMENT Links (Link)*>
+		<!ELEMENT Link (Text|HREF)*>
+		<!ELEMENT Text (#PCDATA)>
+		<!ELEMENT HREF (#PCDATA)>
+		<!ENTITY bull  "&#8226;">
+		<!ENTITY ldquo "&#8220;">
+		<!ENTITY rdquo "&#8221;">
+		<!ENTITY frac14 "&#xbc;">
+		<!ENTITY frac12 "&#xbd;">
+		<!ENTITY frac34 "&#xbe;">
+]>
+<Root>
+	<Recipes>
+		<Recipe>
+			<ID>1</ID>
+			<Tags>
+				<Tag>Meat</Tag>
+				<Tag>Easy</Tag>
+				<Tag>Quick</Tag>
+			</Tags>
+			<Title>Dragon Pork (or Beef) Noodles</Title>
+			<Ingredients>
+				<Ingredient>&frac14; cup chili garlic sauce</Ingredient>
+				<Ingredient>&frac14; cup soy sauce</Ingredient>
+				<Ingredient>&frac14; cup brown sugar</Ingredient>
+				<Ingredient>&frac12; lb. ground pork or beef</Ingredient>
+				<Ingredient>6 oz. ramen noodles</Ingredient>
+			</Ingredients>
+			<Instructions>
+				<Instruction>Combine the chili garlic sauce, soy sauce, and brown sugar in a bowl.</Instruction>
+				<Instruction>Add the ground pork to a skillet and cook over medium heat until it is fully browned. Once browned, add the prepared dragon sauce. Allow the pork to simmer in the sauce for another 5 minutes, or until the sauce has reduced by half.</Instruction>
+				<Instruction>While the pork is browning, begin boiling water for your noodles. Once boiling, add your noodles and cook according to the package directions. Drain the noodles in a colander.</Instruction>
+				<Instruction>Once the sauce has reduced and the noodles have drained, add the noodles to the skillet and toss until everything is combined and coated in sauce.</Instruction>
+			</Instructions>
+			<Notes>
+				<Note>Ground beef can be subtituted for ground pork.</Note>
+				<Note>If this ends up being too spicy, halve the chili garlic sauce and only use &frac34; of what's called for brown sugar.</Note>
+			</Notes>
+			<Links>
+				<Link>
+					<Text>BudgetBytes</Text>
+					<HREF>https://www.budgetbytes.com/pork-peanut-dragon-noodles/#wprm-recipe-container-35818</HREF>
+				</Link>
+			</Links>
+		</Recipe>
+		<Recipe>
+			<ID>2</ID>
+			<Tags>
+				<Tag>Meat</Tag>
+				<Tag>Easy</Tag>
+				<Tag>Quick</Tag>
+			</Tags>
+			<Title>Pigs in a Blanket</Title>
+			<Ingredients>
+				<Ingredient>1 package of hot dogs</Ingredient>
+				<Ingredient>velveeta cheese</Ingredient>
+				<Ingredient>1 tube crescent rolls</Ingredient>
+			</Ingredients>
+			<Instructions>
+				<Instruction>Pre-heat oven according to directions on crescent roll tube.</Instruction>
+				<Instruction>Slice down middle of hot dog. Using a slice of velveeta cheese, break it into &frac14; pieces, placing 2 piece in the slits of the hot dogs</Instruction>
+				<Instruction>Roll the cheese filled hot dog inside of a crescent roll.</Instruction>
+				<Instruction>Cook according to directions on crescent roll tube, or until golden brown.</Instruction>
+			</Instructions>
+		</Recipe>
+		<Recipe>
+			<ID>3</ID>
+			<Tags>
+				<Tag>Easy</Tag>
+				<Tag>Quick</Tag>
+				<Tag>Asian</Tag>
+			</Tags>
+			<Title>Garlic Noodles</Title>
+			<Ingredients>
+				<Ingredient>8 oz angel hair pasta</Ingredient>
+				<Ingredient>4 cloves garlic</Ingredient>
+				<Ingredient>4 Tbsp butter</Ingredient>
+				<Ingredient>2 tsp soy sauce</Ingredient>
+				<Ingredient>2 Tbsp brown sugar</Ingredient>
+				<Ingredient>1 tsp canola oil</Ingredient>
+				<Ingredient>2 Tbsp oyster sauce</Ingredient>
+			</Ingredients>
+			<Instructions>
+				<Instruction>Add the oyster sauce, brown sugar, soy sauce and canola oil to a bowl and stir until combined.</Instruction>
+				<Instruction>Bring a large pot of water to a boil and cook the noodles according to the package directions (boil for 7-10 minutes). Drain the cooked noodles in a colander, then set aside.</Instruction>
+				<Instruction>While the pasta cooks, mince the garlic. Melt the butter in a large skillet over medium-low heat. Once the butter is melted and bubbly, add the garlic and sauté until they are soft and fragrant (1-2 minutes).</Instruction>
+				<Instruction>Remove the skillet from the heat. Add the drained pasta and oyster sauce mixture to the skillet, and stir well to coat the pasta. If your pasta is stiff or sticky making it hard to stir, sprinkle a small amount of hot water over the pasta to loosen it up.</Instruction>
+			</Instructions>
+			<Links>
+				<Link>
+					<Text>BudgetBytes</Text>
+					<HREF>https://www.budgetbytes.com/garlic-noodles/#wprm-recipe-container-33622</HREF>
+				</Link>
+			</Links>
+		</Recipe>
+		<Recipe>
+			<ID>4</ID>
+			<Tags>
+				<Tag>Meat</Tag>
+				<Tag>Asian</Tag>
+			</Tags>
+			<Title>Orange Chicken</Title>
+			<Ingredients>
+				<Ingredient>&frac34; cup orange marmalade</Ingredient>
+				<Ingredient>3 tbsp. soy sauce</Ingredient>
+				<Ingredient>1 &frac12; tbsp. brown sugar</Ingredient>
+				<Ingredient>&frac12; tbsp. ric vinegar</Ingredient>
+				<Ingredient>1 clove minced garlic</Ingredient>
+				<Ingredient>&frac14; tsp red pepper flakes</Ingredient>
+				<Ingredient>as much cornstarch neccesary (about &frac12; cup)</Ingredient>
+				<Ingredient>1 large egg</Ingredient>
+				<Ingredient>1 lb chicken</Ingredient>
+				<Ingredient>2 tbsp. cooking oil</Ingredient>
+			</Ingredients>
+			<Instructions>
+				<Instruction>Combine the marmalade with the soy sauce, brown sugar, rice vinegar, grated ginger, minced garlic, red pepper flakes, and 1/2 Tbsp cornstarch in a small sauce pot. Before placing it over heat, whisk until the cornstarch is fully dissolved. Heat the mixture over medium-low until it begins to simmer, thicken, and turns into a glossy glaze (about 3-5 minutes). Remove the sauce from heat and set it aside</Instruction>
+				<Instruction>Use a sharp knife to remove any excess fat from the chicken thighs, then cut them into small 3/4-inch pieces.</Instruction>
+				<Instruction>Heat oil in a large pan over medium-high heat.</Instruction>
+				<Instruction>Beat egg by hand in bowl. Place chicken in bowl.</Instruction>
+				<Instruction>In another bowl or plate, pour out a good amount of cornstarch. Take egg-coated piece of chicken and hand toss in cornstarch before adding to hot oiled pan. Add in more cornstarch as needed.</Instruction>
+				<Instruction>Let the pieces cook until they are golden brown on the bottom. Flip the chicken pieces, breaking them apart from one another as you turn them. Let them cook until golden brown on the second side and cooked through (about 5-7 minutes total cooking).</Instruction>
+				<Instruction>Turn the heat off under the skillet and pour on the prepared orange sauce. Stir to coat the chicken pieces in sauce</Instruction>
+			</Instructions>
+			<Links>
+				<Link>
+					<Text>Adapted from BudgetBytes</Text>
+					<HREF>https://www.budgetbytes.com/easy-orange-chicken/#wprm-recipe-container-30399</HREF>
+				</Link>
+			</Links>
+		</Recipe>
+	</Recipes>
+</Root>
