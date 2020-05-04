@@ -2,6 +2,7 @@
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	<xsl:output method="html" encoding="utf-8" indent="yes" />
 	
+	<xsl:key name="uniqueTags" match="/Root/Recipes/Recipe/Tags/Tag/text()" use="."/>
 	<xsl:variable name="debug" select="true()"/>
 	<xsl:variable name="lowercase" select="'abcdefghijklmnopqrstuvwxyz'"/>
 	<xsl:variable name="uppercase" select="'ABCDEFGHIJKLMNOPQRSTUVWXYZ'"/>
@@ -27,57 +28,52 @@
 				<!-- Latest compiled and minified JavaScript -->
 				<script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/js/bootstrap-select.min.js"/>
 				<title>Blake Trebelhorn</title>
-				<style type="text/css">
-					.card-flip {
-					  perspective: 1000px;
-					}
-
-					.flipped {
-					  transform: rotateY(180deg);
-					}
-
-					.card-flip,
-					.front,
-					.back {
-					  width: 100%;
-					  //height: 480px;
-					}
-
-					.flip {
-					  transition: 0.6s;
-					  transform-style: preserve-3d;
-					  position: relative;
-					}
-
-					.front,
-					.back {
-					  backface-visibility: hidden;
-					  position: absolute;
-					  top: 0;
-					  left: 0;
-					}
-
-					.front {
-					  z-index: 2;
-					  transform: rotateY(0deg);
-					}
-
-					.back {
-					  transform: rotateY(180deg);
-					}
-				</style>
-				
+				<!-- https://stackoverflow.com/a/16436975 -->
 				<script type="text/javascript">
-					$(document).ready(function() {
-						$(".card-flip").click(function() {
-							$(this).find('.flip').toggleClass('flipped');
-						});
-						$('.card-flip').each(function() {
-							var maxHeight = $(this).find('.front-card').height();
-							if ($(this).find('.back-card').height() > maxHeight) {
-								maxHeight = $(this).find('.back-card').height();
+					function arraysEqual(a, b) {
+						if (a === b) return true;
+						if (a == null || b == null) return false;
+						if (a.length !== b.length) return false;
+
+						// If you don't care about the order of the elements inside
+						// the array, you should sort both arrays here.
+						// Please note that calling sort on an array will modify that array.
+						// you might want to clone your array first.
+
+						for (var i = 0; i &lt; a.length; ++i) {
+							if (a[i] !== b[i]) return false;
+						}
+
+						return true;
+					}
+
+					$(document).ready(function () {
+						var $card = $('.card');
+						var $filterSelect = $('#filterSelect');
+						var $search = $('#search');
+						$filterSelect.change(function () {
+						    $search.val('');
+							var selectedOptionsArray = $(this).val();
+							$card.show();
+							if (selectedOptionsArray.length) {
+								$card.each(function () {
+									var $this = $(this);
+									var cardTags = $this.data('tags').split(',').filter(item => item);
+									var intersection = selectedOptionsArray.filter(x => cardTags.includes(x));
+									if (!arraysEqual(intersection, selectedOptionsArray)) {
+										$this.hide();
+									}
+								});
 							}
-							this.style.height = maxHeight;
+						});
+
+						$search.keyup(function () {
+						    $filterSelect.val('').selectpicker('refresh');
+							$card.show();
+							var filter = $(this).val() + "";
+							if (filter) {
+								$(".card:not([data-title*='" + filter.toLowerCase() + "'])").hide();
+							}
 						});
 					});
 				</script>
@@ -86,43 +82,33 @@
 			<body>
 				<a href="../index.html">Return to main site</a>
 				<div class="container">
-					<div class="row d-none">
-						<xsl:if test="$debug">
-							<xsl:attribute name="class">row</xsl:attribute>
-						</xsl:if>
+					<div class="row no-gutters">
 						<div class="col-xs-12 col-sm-5">
 							<div class="form-group">
-								<label for="search" class="mr-2">Search</label>
+								<label for="search" class="mr-2 sr-only">Search</label>
 								<input type="text" class="form-control" id="search" placeholder="Search">
 									<xsl:attribute name="onkeyup">
-										$('.card-flip').show();
-										var filter = $(this).val() + "";
-										$(".card-flip:not([data-title*='" + filter.toLowerCase() + "'])").hide();
+
 									</xsl:attribute>
 								</input>
 							</div>
 						</div>
-						<div class="col-xs-12 col-sm-2">Or</div>
+						<div class="col-xs-12 col-sm-2 font-weight-bold text-sm-center mb-3 mb-sm-0">Or</div>
 						<div class="col-xs-12 col-sm-5">
 							<div class="form-group">
-								<label for="exampleFormControlSelect1" class="mr-2">Filter</label>
-								<select multiple="multiple" class="selectpicker" id="exampleFormControlSelect1">
-									<option>1</option>
-									<option>2</option>
-									<option>3</option>
-									<option>4</option>
-									<option>5</option>
+								<label for="filterSelect" class="sr-only">Filter</label>
+								<select multiple="multiple" class="selectpicker" id="filterSelect" title="Filter">
+									<xsl:for-each select="/Root/Recipes/Recipe/Tags/Tag/text()[generate-id() = generate-id(key('uniqueTags', .)[1])]">
+										<option>
+											<xsl:value-of select="."/>
+										</option>
+									</xsl:for-each>
 								</select>
 							</div>
 						</div>
 					</div>
 					<div id="card-container">
-						<div class="row">
-							<xsl:if test="$debug">
-								<xsl:attribute name="class"><!-- clear out if test --></xsl:attribute>
-							</xsl:if>
-							<xsl:apply-templates select="/Root/Recipes/Recipe"/>
-						</div>
+						<xsl:apply-templates select="/Root/Recipes/Recipe"/>
 					</div>
 				</div>
 			</body>
@@ -130,58 +116,47 @@
 	</xsl:template>
 		
 	<xsl:template match="Recipe">
-		<div class="card-flip col-xs-12 col-sm-6 col-lg-4 mb-3" id="{ID}" data-title="{translate(Title, $lowercase, $uppercase)}">
+		<div class="card border-dark mb-3" id="{ID}" data-title="{translate(Title, $uppercase, $lowercase)}">
 			<xsl:attribute name="data-tags">
 				<xsl:for-each select="Tags/Tag">
 					<xsl:value-of select="concat(., ',')"/>
 				</xsl:for-each>
 			</xsl:attribute>
-			<xsl:if test="$debug">
-				<xsl:attribute name="class">card-flip mb-3</xsl:attribute>
-			</xsl:if>
-			<div class="flip">
-				<div class="front">
-					<!-- front content -->
-					<div class="card border-dark front-card">
-					  <div class="card-header"><xsl:value-of select="Title"/></div>
-						<ul class="list-group list-group-flush">
-							<xsl:for-each select="Ingredients/Ingredient">
-								<li class="list-group-item"><xsl:value-of select="."/></li>
-							</xsl:for-each>
-						</ul>
-						<xsl:if test="Links/Link">
-							<div class="card-body">
-								<xsl:for-each select="Links/Link">
-									<a class="card-link" href="{HREF}" role="button" target="_blank"><xsl:value-of select="Text"/></a>
-								</xsl:for-each>
-							</div>
-						</xsl:if>
-					</div>
-				</div>
-				<div class="back">
-					<!-- back content -->
-					<div class="card border-dark back-card">
-					  <div class="card-header"><xsl:value-of select="Title"/></div>
-						<div class="card-body">
-							<p class="card-text">
-								<ol>
-									<xsl:for-each select="Instructions/Instruction">
-										<li><xsl:value-of select="."/></li>
-									</xsl:for-each>
-								</ol>
-							</p>
-						</div>
-						<xsl:if test="Notes/Note">
-							<p class="card-text">
-								<ul>
-									<xsl:for-each select="Notes/Note">
-										<li><xsl:value-of select="."/></li>
-									</xsl:for-each>
-								</ul>
-							</p>
-						</xsl:if>
-					</div>
-				</div>
+			<div class="card-header"><xsl:value-of select="Title"/></div>
+			<a class="list-group-item border-top-0 text-info" data-toggle="collapse" href="{concat('#Ingredients', ID)}">
+				Ingredients
+			</a>
+			<ul id="{concat('Ingredients', ID)}" class="collapse list-group list-group-flush">
+				<xsl:for-each select="Ingredients/Ingredient">
+					<li class="list-group-item"><xsl:value-of select="."/></li>
+				</xsl:for-each>
+			</ul>
+			<a class="list-group-item text-info" href="{concat('#Instructions', ID)}" data-toggle="collapse">
+				Instructions
+			</a>
+			<div class="card-body collapse" id="{concat('Instructions', ID)}">
+				<ol>
+					<xsl:for-each select="Instructions/Instruction">
+						<li><xsl:value-of select="."/></li>
+					</xsl:for-each>
+				</ol>
+				<xsl:if test="Notes/Note">
+					<ul>
+						<xsl:for-each select="Notes/Note">
+							<li><xsl:value-of select="."/></li>
+						</xsl:for-each>
+					</ul>
+				</xsl:if>
+			</div>
+			<div class="card-body">
+				<xsl:if test="Links/Link">
+					Source<xsl:if test="count(Links/Link) &gt; 1">s</xsl:if>:
+					<xsl:for-each select="Links/Link">
+						<a class="card-link" href="{HREF}" role="button" target="_blank">
+							<xsl:value-of select="Text"/>
+						</a>
+					</xsl:for-each>
+				</xsl:if>
 			</div>
 		</div>
 	</xsl:template>

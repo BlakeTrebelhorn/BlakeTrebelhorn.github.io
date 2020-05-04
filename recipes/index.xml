@@ -1,4 +1,5 @@
 <?xml version="1.0"?>
+<?xml-stylesheet href="./index.xsl" type="text/xsl"?>
 <!DOCTYPE Root [
 		<!ELEMENT Root (Recipes)*>
 		<!ELEMENT Recipes (Recipe)*>
@@ -22,18 +23,22 @@
 		<!ENTITY rdquo "&#8221;">
 		<!ENTITY frac14 "&#xbc;">
 		<!ENTITY frac12 "&#xbd;">
+		<!ENTITY frac13 "&#8531;">
 		<!ENTITY frac34 "&#xbe;">
+		<!ENTITY deg "&#176;">
+		<!ENTITY eacute "&#233;">
 ]>
 <Root>
 	<Recipes>
 		<Recipe>
 			<ID>1</ID>
+			<Title>Dragon Pork (or Beef) Noodles</Title>
 			<Tags>
 				<Tag>Meat</Tag>
 				<Tag>Easy</Tag>
 				<Tag>Quick</Tag>
+				<Tag>Asian</Tag>
 			</Tags>
-			<Title>Dragon Pork (or Beef) Noodles</Title>
 			<Ingredients>
 				<Ingredient>&frac14; cup chili garlic sauce</Ingredient>
 				<Ingredient>&frac14; cup soy sauce</Ingredient>
@@ -48,7 +53,7 @@
 				<Instruction>Once the sauce has reduced and the noodles have drained, add the noodles to the skillet and toss until everything is combined and coated in sauce.</Instruction>
 			</Instructions>
 			<Notes>
-				<Note>Ground beef can be subtituted for ground pork.</Note>
+				<Note>Ground beef can be substituted for ground pork.</Note>
 				<Note>If this ends up being too spicy, halve the chili garlic sauce and only use &frac34; of what's called for brown sugar.</Note>
 			</Notes>
 			<Links>
@@ -60,12 +65,12 @@
 		</Recipe>
 		<Recipe>
 			<ID>2</ID>
+			<Title>Pigs in a Blanket</Title>
 			<Tags>
 				<Tag>Meat</Tag>
 				<Tag>Easy</Tag>
 				<Tag>Quick</Tag>
 			</Tags>
-			<Title>Pigs in a Blanket</Title>
 			<Ingredients>
 				<Ingredient>1 package of hot dogs</Ingredient>
 				<Ingredient>velveeta cheese</Ingredient>
@@ -73,27 +78,27 @@
 			</Ingredients>
 			<Instructions>
 				<Instruction>Pre-heat oven according to directions on crescent roll tube.</Instruction>
-				<Instruction>Slice down middle of hot dog. Using a slice of velveeta cheese, break it into &frac14; pieces, placing 2 piece in the slits of the hot dogs</Instruction>
+				<Instruction>Slice down middle of hot dog. Using a slice of velveeta cheese, break it into &frac14; pieces, placing 2 pieces in the slits of the hot dogs</Instruction>
 				<Instruction>Roll the cheese filled hot dog inside of a crescent roll.</Instruction>
 				<Instruction>Cook according to directions on crescent roll tube, or until golden brown.</Instruction>
 			</Instructions>
 		</Recipe>
 		<Recipe>
 			<ID>3</ID>
+			<Title>Garlic Noodles</Title>
 			<Tags>
 				<Tag>Easy</Tag>
 				<Tag>Quick</Tag>
 				<Tag>Asian</Tag>
 			</Tags>
-			<Title>Garlic Noodles</Title>
 			<Ingredients>
 				<Ingredient>8 oz angel hair pasta</Ingredient>
 				<Ingredient>4 cloves garlic</Ingredient>
-				<Ingredient>4 Tbsp butter</Ingredient>
+				<Ingredient>4 tbsp butter</Ingredient>
 				<Ingredient>2 tsp soy sauce</Ingredient>
-				<Ingredient>2 Tbsp brown sugar</Ingredient>
+				<Ingredient>2 tbsp brown sugar</Ingredient>
 				<Ingredient>1 tsp canola oil</Ingredient>
-				<Ingredient>2 Tbsp oyster sauce</Ingredient>
+				<Ingredient>2 tbsp oyster sauce</Ingredient>
 			</Ingredients>
 			<Instructions>
 				<Instruction>Add the oyster sauce, brown sugar, soy sauce and canola oil to a bowl and stir until combined.</Instruction>
@@ -110,22 +115,22 @@
 		</Recipe>
 		<Recipe>
 			<ID>4</ID>
+			<Title>Orange Chicken</Title>
 			<Tags>
 				<Tag>Meat</Tag>
 				<Tag>Asian</Tag>
 			</Tags>
-			<Title>Orange Chicken</Title>
 			<Ingredients>
 				<Ingredient>&frac34; cup orange marmalade</Ingredient>
-				<Ingredient>3 tbsp. soy sauce</Ingredient>
-				<Ingredient>1 &frac12; tbsp. brown sugar</Ingredient>
-				<Ingredient>&frac12; tbsp. ric vinegar</Ingredient>
+				<Ingredient>3 tbsp soy sauce</Ingredient>
+				<Ingredient>1 &frac12; tbsp brown sugar</Ingredient>
+				<Ingredient>&frac12; tbsp rice vinegar</Ingredient>
 				<Ingredient>1 clove minced garlic</Ingredient>
 				<Ingredient>&frac14; tsp red pepper flakes</Ingredient>
-				<Ingredient>as much cornstarch neccesary (about &frac12; cup)</Ingredient>
+				<Ingredient>as much cornstarch necessary (about &frac12; cup)</Ingredient>
 				<Ingredient>1 large egg</Ingredient>
 				<Ingredient>1 lb chicken</Ingredient>
-				<Ingredient>2 tbsp. cooking oil</Ingredient>
+				<Ingredient>2 tbsp cooking oil</Ingredient>
 			</Ingredients>
 			<Instructions>
 				<Instruction>Combine the marmalade with the soy sauce, brown sugar, rice vinegar, grated ginger, minced garlic, red pepper flakes, and 1/2 Tbsp cornstarch in a small sauce pot. Before placing it over heat, whisk until the cornstarch is fully dissolved. Heat the mixture over medium-low until it begins to simmer, thicken, and turns into a glossy glaze (about 3-5 minutes). Remove the sauce from heat and set it aside</Instruction>
@@ -142,6 +147,154 @@
 					<HREF>https://www.budgetbytes.com/easy-orange-chicken/#wprm-recipe-container-30399</HREF>
 				</Link>
 			</Links>
+		</Recipe>
+		<Recipe>
+			<ID>5</ID>
+			<Title>Pizza Burger Casserole</Title>
+			<Tags>
+				<Tag>Italian</Tag>
+				<Tag>Pasta</Tag>
+				<Tag>Pizza</Tag>
+			</Tags>
+			<Ingredients>
+				<Ingredient>1 package elbow macaroni</Ingredient>
+				<Ingredient>1 tbsp butter/margarine</Ingredient>
+				<Ingredient>&frac12; onion</Ingredient>
+				<Ingredient>1 lb. hamburger</Ingredient>
+				<Ingredient>1 can (8 oz.) pizza sauce</Ingredient>
+				<Ingredient>&frac12; cup american cheese</Ingredient>
+				<Ingredient>&frac14; cup grated parmesan cheese</Ingredient>
+			</Ingredients>
+			<Instructions>
+				<Instruction>Pre-heat oven to 350&deg;F</Instruction>
+				<Instruction>Cook the package of macaroni, drain, and let cool.</Instruction>
+				<Instruction>While the macaroni is cooking, melt the butter/margarine in a pan. Brown the onion in it. Add the hambuger and brown well; drain.</Instruction>
+				<Instruction>Combine onion/hamburger, macaroni, and pizza sauce into a greased casserole dish.</Instruction>
+				<Instruction>Sprinkle american and parmesan cheese over top.</Instruction>
+				<Instruction>Place in oven and bake 45 min - 1 hour, until cheese is melted.</Instruction>
+			</Instructions>
+			<Notes>
+				<Note>Onion can be omitted.</Note>
+				<Note>Other pizza toppings, such as mushrooms or pepperoni, can be added.</Note>
+			</Notes>
+		</Recipe>
+		<Recipe>
+			<ID>6</ID>
+			<Title>Pizza Dippers</Title>
+			<Tags>
+				<Tag>Pizza</Tag>
+				<Tag>Meat</Tag>
+				<Tag>Easy</Tag>
+				<Tag>Quick</Tag>
+			</Tags>
+			<Ingredients>
+				<Ingredient>8 small flour tortillas</Ingredient>
+				<Ingredient>40 slices pepperoni</Ingredient>
+				<Ingredient>8 mozzarella cheese sticks</Ingredient>
+				<Ingredient>oil, as needed</Ingredient>
+				<Ingredient>&frac12; cup pizza sauce for dipping</Ingredient>
+			</Ingredients>
+			<Instructions>
+				<Instruction>Pre-heat oven to 400&deg;F.</Instruction>
+				<Instruction>Microwave 4 tortillas with a damp paper towel on them for 20 seconds. Microwave the second batch when ready.</Instruction>
+				<Instruction>Place 5 pepperoni on the bottom of the tortilla, 2 in a row, then 3 in a row on above them.</Instruction>
+				<Instruction>Place the mozzarella stick on top of the pepperoni, tuck in the ends, and roll tightly.</Instruction>
+				<Instruction>Place on a greased baking sheet, putting a small amount of oil on top of the rolls.</Instruction>
+				<Instruction>Bake for 10 - 15 min, until lightly browned.</Instruction>
+				<Instruction>Serve with pizza sauce for dipping.</Instruction>
+			</Instructions>
+			<Links>
+				<Link>
+					<Text>BudgetBytes</Text>
+					<HREF>https://www.budgetbytes.com/pizza-roll-ups/#wprm-recipe-container-35524</HREF>
+				</Link>
+			</Links>
+		</Recipe>
+		<Recipe>
+			<ID>7</ID>
+			<Title>Carbonara</Title>
+			<Tags>
+				<Tag>Italian</Tag>
+				<Tag>Meat</Tag>
+				<Tag>Easy</Tag>
+				<Tag>Quick</Tag>
+			</Tags>
+			<Ingredients>
+				<Ingredient>&frac12; lb. thick cut bacon</Ingredient>
+				<Ingredient>&frac12; cup grated Parmesan or Romero cheese</Ingredient>
+				<Ingredient>3 large eggs + 1 egg yolk (optional)</Ingredient>
+				<Ingredient>ground black pepper</Ingredient>
+				<Ingredient>2 cloves of garlic</Ingredient>
+				<Ingredient>&frac13; cup of the water from the noodles</Ingredient>
+				<Ingredient>16 oz. of spaghetti</Ingredient>
+			</Ingredients>
+			<Instructions>
+				<Instruction>Combine eggs and yolk in a bowl, blend well.</Instruction>
+				<Instruction>Add cheese to eggs and blend with a fork, and season with black pepper.</Instruction>
+				<Instruction>Slice the bacon into large chunks.</Instruction>
+				<Instruction>In a cold non-stick pan, add the bacon and turn the heat to medium.</Instruction>
+				<Instruction>Once the bacon is fully cooked, strain out most of the grease, leaving about 2 tbsp in the pan.</Instruction>
+				<Instruction>Turn the pan to low and add the garlic, minced. Saut&eacute; for 1 minute and turn off heat.</Instruction>
+				<Instruction>Add the noodles to a pot of heavily salted water and cook.</Instruction>
+				<Instruction>Remove the noodles from the pot, reserving at least &frac13; cup of the starchy water. Place them in the pan with the bacon.</Instruction>
+				<Instruction>Add the egg and cheese mixture to the pan, stirring constantly to cook the eggs as to not allow them to scramble.</Instruction>
+				<Instruction>Taste test/check for sauce thickness. If the sauce is too thick, add some of the starch water. If too thin, add more grated cheese.</Instruction>
+			</Instructions>
+			<Notes>
+				<Note>Any type of noodle can be used. I prefer spaghetti, Babish recommended bucatini.</Note>
+			</Notes>
+			<Links>
+				<Link>
+					<Text>Babish</Text>
+					<HREF>https://basicswithbabish.co/basicsepisodes/carbonara</HREF>
+				</Link>
+			</Links>
+		</Recipe>
+		<Recipe>
+			<ID>8</ID>
+			<Title>Quesadilla</Title>
+			<Tags>
+				<Tag>Mexican</Tag>
+				<Tag>Meat</Tag>
+				<Tag>Easy</Tag>
+				<Tag>Quick</Tag>
+			</Tags>
+			<Ingredients>
+				<Ingredient>1 breaded chicken patty</Ingredient>
+				<Ingredient>1 medium-sized tortilla</Ingredient>
+				<Ingredient>&frac14; - &frac13; cup of cheese (mexican blend, sharp/regular cheddar)</Ingredient>
+				<Ingredient>Any other sides/toppings you may want (black beans, sour cream, salsa, lettuce, etc)</Ingredient>
+			</Ingredients>
+			<Instructions>
+				<Instruction>Cook chicken patty so that it's crispy (microwave then in a pan on medium heat, or in the oven).</Instruction>
+				<Instruction>In a medium pan, place the tortilla on low-medium heat. Sprinkle cheese evenly, allow to melt almost fully.</Instruction>
+				<Instruction>Cut crisped chicken patty into approximately 7-8 strips.</Instruction>
+				<Instruction>Place strips onto &frac12; of the tortilla, spreading across from one side to the other.</Instruction>
+				<Instruction>Fold over the tortilla. Brown each side lightly, then serve.</Instruction>
+			</Instructions>
+		</Recipe>
+		<Recipe>
+			<ID>9</ID>
+			<Title>Pizza Bagels</Title>
+			<Tags>
+				<Tag>Pizza</Tag>
+				<Tag>Easy</Tag>
+				<Tag>Quick</Tag>
+			</Tags>
+			<Ingredients>
+				<Ingredient>1 bagel</Ingredient>
+				<Ingredient>&frac14; cup pizza sauce</Ingredient>
+				<Ingredient>&frac14; cup of mozzarella cheese</Ingredient>
+				<Ingredient>toppings (I use pepperoni)</Ingredient>
+			</Ingredients>
+			<Instructions>
+				<Instruction>Preheat oven to 350&deg;F.</Instruction>
+				<Instruction>Place bagels onto baking sheet, cut in half.</Instruction>
+				<Instruction>Spread sauce onto bagels.</Instruction>
+				<Instruction>Cover in cheese.</Instruction>
+				<Instruction>Place toppings.</Instruction>
+				<Instruction>Place in oven for 8-10 minutes, or until cheese is melted.</Instruction>
+			</Instructions>
 		</Recipe>
 	</Recipes>
 </Root>
