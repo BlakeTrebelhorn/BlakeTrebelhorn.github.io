@@ -24,9 +24,11 @@
 		<!ENTITY frac14 "&#xbc;">
 		<!ENTITY frac12 "&#xbd;">
 		<!ENTITY frac13 "&#8531;">
+		<!ENTITY frac23 "&#8532;;">
 		<!ENTITY frac34 "&#xbe;">
 		<!ENTITY deg "&#176;">
 		<!ENTITY eacute "&#233;">
+		<!ENTITY times "&#215;">
 ]>
 <Root>
 	<Recipes>
@@ -34,7 +36,7 @@
 			<ID>1</ID>
 			<Title>Dragon Pork (or Beef) Noodles</Title>
 			<Tags>
-				<Tag>Meat</Tag>
+				<Tag>Beef</Tag>
 				<Tag>Easy</Tag>
 				<Tag>Quick</Tag>
 				<Tag>Asian</Tag>
@@ -67,7 +69,7 @@
 			<ID>2</ID>
 			<Title>Pigs in a Blanket</Title>
 			<Tags>
-				<Tag>Meat</Tag>
+				<Tag>Pork</Tag>
 				<Tag>Easy</Tag>
 				<Tag>Quick</Tag>
 			</Tags>
@@ -117,7 +119,7 @@
 			<ID>4</ID>
 			<Title>Orange Chicken</Title>
 			<Tags>
-				<Tag>Meat</Tag>
+				<Tag>Chicken</Tag>
 				<Tag>Asian</Tag>
 			</Tags>
 			<Ingredients>
@@ -155,6 +157,7 @@
 				<Tag>Italian</Tag>
 				<Tag>Pasta</Tag>
 				<Tag>Pizza</Tag>
+				<Tag>Beef</Tag>
 			</Tags>
 			<Ingredients>
 				<Ingredient>1 package elbow macaroni</Ingredient>
@@ -183,7 +186,7 @@
 			<Title>Pizza Dippers</Title>
 			<Tags>
 				<Tag>Pizza</Tag>
-				<Tag>Meat</Tag>
+				<Tag>Pork</Tag>
 				<Tag>Easy</Tag>
 				<Tag>Quick</Tag>
 			</Tags>
@@ -215,7 +218,7 @@
 			<Title>Carbonara</Title>
 			<Tags>
 				<Tag>Italian</Tag>
-				<Tag>Meat</Tag>
+				<Tag>Pork</Tag>
 				<Tag>Easy</Tag>
 				<Tag>Quick</Tag>
 			</Tags>
@@ -255,7 +258,7 @@
 			<Title>Quesadilla</Title>
 			<Tags>
 				<Tag>Mexican</Tag>
-				<Tag>Meat</Tag>
+				<Tag>Chicken</Tag>
 				<Tag>Easy</Tag>
 				<Tag>Quick</Tag>
 			</Tags>
@@ -295,6 +298,258 @@
 				<Instruction>Place toppings.</Instruction>
 				<Instruction>Place in oven for 8-10 minutes, or until cheese is melted.</Instruction>
 			</Instructions>
+		</Recipe>
+		<Recipe>
+			<ID>10</ID>
+			<Title>Ginger Soy Glazed Chicken</Title>
+			<Tags>
+				<Tag>Chicken</Tag>
+				<Tag>Asian</Tag>
+			</Tags>
+			<Ingredients>
+				<Ingredient>&frac14; cup brown sugar</Ingredient>
+				<Ingredient>3 Tbsp soy sauce</Ingredient>
+				<Ingredient>2 cloves garlic</Ingredient>
+				<Ingredient>1 Tbsp ginger</Ingredient>
+				<Ingredient>Pepper</Ingredient>
+				<Ingredient>1 &frac12; Tbsp cooking oil</Ingredient>
+				<Ingredient>~1 &frac12; lbs chicken</Ingredient>
+			</Ingredients>
+			<Instructions>
+				<Instruction>Mince the garlic and grate the ginger into a bowl.</Instruction>
+				<Instruction>Stir in brown sugar, soy sauce, 1 Tbsp oil, and pepper to taste.</Instruction>
+				<Instruction>Place the chicken breasts in a shallow dish or ziplock bag.</Instruction>
+				<Instruction>Pour glaze over chicken and allow to sit for 30 min up to a day.</Instruction>
+				<Instruction>When cooking chicken, heat the remaining &frac12; Tbsp in a skillet.</Instruction>
+				<Instruction>Cook the chicken until well browned on each side; set aside.</Instruction>
+				<Instruction>In the empty skillet, pour the rest of the marinade. Allow to boil.</Instruction>
+				<Instruction>Whisk while boiling to allow bits to re-desolve into the marinade. Boil until thick.</Instruction>
+				<Instruction>Turn off heat, add chicken back into glaze.</Instruction>
+			</Instructions>
+			<Notes>
+				<Note>Green Onions and sesame seeds can be used to garnish.</Note>
+			</Notes>
+			<Links>
+				<Link>
+					<HREF>https://www.budgetbytes.com/sticky-ginger-soy-glazed-chicken/#wprm-recipe-container-30661</HREF>
+					<Text>BudgetBytes</Text>
+				</Link>
+			</Links>
+		</Recipe>
+		<Recipe>
+			<ID>11</ID>
+			<Title>Baked Nachos</Title>
+			<Tags>
+				<Tag>Beef</Tag>
+				<Tag>Mexican</Tag>
+			</Tags>
+			<Ingredients>
+				<Ingredient>&frac12; lb ground beef</Ingredient>
+				<Ingredient>1 (16 oz.) can refried beans</Ingredient>
+				<Ingredient>1 (8 oz.) can tomato sauce</Ingredient>
+				<Ingredient>&frac12; cup chopped green bell pepper</Ingredient>
+				<Ingredient>&frac12; cup chopped onion</Ingredient>
+				<Ingredient>Taco seasoning</Ingredient>
+				<Ingredient>1 cup shredded cheddar cheese</Ingredient>
+				<Ingredient>1 bag tortilla chips</Ingredient>
+			</Ingredients>
+			<Instructions>
+				<Instruction>Pre-heat oven to 350&deg;F.</Instruction>
+				<Instruction>Brown the ground beef in a skillet.</Instruction>
+				<Instruction>Add refried beans, pepper, onion, and taco seasoning to skillet.</Instruction>
+				<Instruction>Simmer for 10 - 12 min.</Instruction>
+				<Instruction>While simmering, arrange chips in a shallow casserole dish.</Instruction>
+				<Instruction>Spoon the mixture over the chips.</Instruction>
+				<Instruction>Sprinkle cheese over top.</Instruction>
+				<Instruction>Bake in oven for 20 min, or until cheese has melted.</Instruction>
+			</Instructions>
+			<Notes>
+				<Note>Refried beans, pepper, onion are optional.</Note>
+				<Note>Topping can be used as well, such as chives, sour cream, etc.</Note>
+			</Notes>
+			<Links>
+				<Link>
+					<HREF>https://www.thespruceeats.com/baked-ground-beef-nachos-3050670</HREF>
+					<Text>The Spruce Eats</Text>
+				</Link>
+			</Links>
+		</Recipe>
+		<Recipe>
+			<ID>12</ID>
+			<Title>Mongolian Chicken</Title>
+			<Tags>
+				<Tag>Chicken</Tag>
+				<Tag>Asian</Tag>
+			</Tags>
+			<Ingredients>
+				<Ingredient>1 lb chicken</Ingredient>
+				<Ingredient>&frac14; cup cornstarch</Ingredient>
+				<Ingredient>2 Tbsp vegetable oil</Ingredient>
+				<Ingredient>&frac12; tsp ginger</Ingredient>
+				<Ingredient>1 Tbsp garlic</Ingredient>
+				<Ingredient>&frac14; cup soy sauce</Ingredient>
+				<Ingredient>&frac12; cup chicken stock</Ingredient>
+				<Ingredient>2 Tbsp brown sugar</Ingredient>
+				<Ingredient>1 tsp sesame oil</Ingredient>
+			</Ingredients>
+			<Instructions>
+				<Instruction>Chunk chicken into bite size pieces.</Instruction>
+				<Instruction>Coat pieces in cornstarch.</Instruction>
+				<Instruction>Heat pan over high heat wil oil.</Instruction>
+				<Instruction>Cook chicken fully (approx. 4 min).</Instruction>
+				<Instruction>Add garlic and ginger and cook for 2 min.</Instruction>
+				<Instruction>Add soy sauce, chicken stock, and brown sugar.</Instruction>
+				<Instruction>Cook for 3-4 minutes, or until sauce thickens.</Instruction>
+				<Instruction>Turn heat off, add sesame oil.</Instruction>
+				<Instruction>Stir well and serve with rice.</Instruction>
+			</Instructions>
+			<Links>
+				<Link>
+					<HREF>https://pickledplum.com/mongolian-chicken-recipe/</HREF>
+					<Text>PickledPlum</Text>
+				</Link>
+			</Links>
+		</Recipe>
+		<Recipe>
+			<ID>13</ID>
+			<Title>Honey Garlic Chicken</Title>
+			<Tags>
+				<Tag>Chicken</Tag>
+				<Tag>Savory</Tag>
+			</Tags>
+			<Ingredients>
+				<Ingredient>&frac14; cup soy sauce</Ingredient>
+				<Ingredient>3 Tbsp honey</Ingredient>
+				<Ingredient>2 cloves garlic, minced</Ingredient>
+				<Ingredient>Juice of 1 lime</Ingredient>
+				<Ingredient>1 Tbsp cornstarch</Ingredient>
+				<Ingredient>1 tsp sriracha</Ingredient>
+				<Ingredient>2 tbsp sesame oil</Ingredient>
+				<Ingredient>1 lb chicken breasts</Ingredient>
+			</Ingredients>
+			<Instructions>
+				<Instruction>Pre-heat oven to 350&deg;F.</Instruction>
+				<Instruction>Whisk together soy sauce, honey, garlic, lime juice, sriracha, 1 tbsp sesame oil, cornstarch.</Instruction>
+				<Instruction>Season chicken with salt and pepper.</Instruction>
+				<Instruction>Heat ovenproof skillet over medium-high heat.</Instruction>
+				<Instruction>Sear chicken for 4 min on each side.</Instruction>
+				<Instruction>Pour glaze over and place in oven.</Instruction>
+				<Instruction>Cook for 25 minutes.</Instruction>
+				<Instruction>Spoon glaze over chicken and serve.</Instruction>
+			</Instructions>
+			<Links>
+				<Link>
+					<HREF>https://www.delish.com/cooking/recipe-ideas/recipes/a45708/baked-honey-garlic-chicken-recipe/</HREF>
+					<Text>Delish</Text>
+				</Link>
+			</Links>
+		</Recipe>
+		<Recipe>
+			<ID>14</ID>
+			<Title>Honey Soy Chicken</Title>
+			<Tags>
+				<Tag>Chicken</Tag>
+				<Tag>Savory</Tag>
+			</Tags>
+			<Ingredients>
+				<Ingredient>&frac13; cup soy sauce</Ingredient>
+				<Ingredient>&frac14; cup honey</Ingredient>
+				<Ingredient>4 cloves garlic, minced</Ingredient>
+				<Ingredient>1 Tbsp ginger</Ingredient>
+				<Ingredient>&frac12; tsp pepper</Ingredient>
+				<Ingredient>2 tbsp sesame oil</Ingredient>
+				<Ingredient>4 large chicken breasts</Ingredient>
+			</Ingredients>
+			<Instructions>
+				<Instruction>Stir together all ingredients except chicken and pour into a large ziploc bag.</Instruction>
+				<Instruction>Add the chicken breasts and allow to marinate for a few hours to overnight.</Instruction>
+				<Instruction>Pre-heat oven to 375&deg;F.</Instruction>
+				<Instruction>Place marinated chicken breasts on foil lined cookie sheet.</Instruction>
+				<Instruction>Cook for 45 minutes, brushing the leftover marinade on the chicken every 10 minutes.</Instruction>
+			</Instructions>
+			<Links>
+				<Link>
+					<HREF>https://www.rockrecipes.com/honey-soy-chicken-breasts/</HREF>
+					<Text>Rock Recipes</Text>
+				</Link>
+			</Links>
+		</Recipe>
+		<Recipe>
+			<ID>15</ID>
+			<Title>Kung Pao Chicken</Title>
+			<Tags>
+				<Tag>Chicken</Tag>
+				<Tag>Asian</Tag>
+			</Tags>
+			<Ingredients>
+				<Ingredient>3 Tbsp soy sauce</Ingredient>
+				<Ingredient>3 Tbsp rice wine</Ingredient>
+				<Ingredient>2 Tbsp corn starch</Ingredient>
+				<Ingredient>2 Tbsp brown sugar</Ingredient>
+				<Ingredient>2 Tbsp sambal (chili sauce)</Ingredient>
+				<Ingredient>2 tsp garlic, minced</Ingredient>
+				<Ingredient>1 tsp sesame oil</Ingredient>
+				<Ingredient>1 lb boneless chicken breasts</Ingredient>
+			</Ingredients>
+			<Instructions>
+				<Instruction>Prepare the marinade:</Instruction>
+				<Instruction>Dissolve 1 Tbsp of cornstarch in 1 Tbsp of water and then add 1 Tbsp of vegetable oil, 1 Tbsp of soy sauce, 1 Tbsp of rice wine, and 2 tsp of minced garlic. Stir to combine.</Instruction>
+				<Instruction>Cut the chicken into chunks. Pour the marinade over top the chicken in a small bowl or container, and refrigerate for at least 30 min.</Instruction>
+				<Instruction>While the chicken is marinating, prepare the sauce:</Instruction>
+				<Instruction>Dissolve 1 Tbsp of cornstarch in 1 Tbsp of water and then add 2 Tbsp of soy sauce, 2 Tbsp of rice wine, and 2 Tbsp sambal, 2 Tbsp brown sugar, 1 tsp sesame oil. Stir to combine.</Instruction>
+				<Instruction>Heat 2 Tbsp of oil in a large skillet over medium-high head. Once oil is hot, add marinated chicken. Cook appox. 5 min.</Instruction>
+				<Instruction>Add the prepared sauce and cook until thickened (2 -3 min.) and serve.</Instruction>
+			</Instructions>
+			<Links>
+				<Link>
+					<HREF>https://www.budgetbytes.com/kung-pao-chicken/#wprm-recipe-container-33110</HREF>
+					<Text>BudgetBytes</Text>
+				</Link>
+			</Links>
+		</Recipe>
+		<Recipe>
+			<ID>16</ID>
+			<Title>Ziti</Title>
+			<Tags>
+				<Tag>Beef</Tag>
+				<Tag>Pasta</Tag>
+				<Tag>Italian</Tag>
+			</Tags>
+			<Ingredients>
+				<Ingredient>8 oz. ziti</Ingredient>
+				<Ingredient>1 cup ricotta cheese</Ingredient>
+				<Ingredient>&frac23; cup grated provolone</Ingredient>
+				<Ingredient>&frac14; cup shredded provolone for topping</Ingredient>
+				<Ingredient>4 oz. mozzarella, cubed</Ingredient>
+				<Ingredient>&frac14; cup shredded for topping</Ingredient>
+				<Ingredient>&frac12; cup grated Parmesan cheese</Ingredient>
+				<Ingredient>1 tsp pepper</Ingredient>
+				<Ingredient>1 Tbsp chopped parsley</Ingredient>
+				<Ingredient>1 Tbsp chopped basil</Ingredient>
+				<Ingredient>1 jar (24 oz.) tomato sauce</Ingredient>
+			</Ingredients>
+			<Instructions>
+				<Instruction>Pre-heat oven to 375&deg;F.</Instruction>
+				<Instruction>Boil pasta for &frac12; the time it calls for - it will finish in the oven.</Instruction>
+				<Instruction>While pasta is cooking, combine ricotta, provolone, mozzarella, Parmesan, pepper, parsley, and basil in a medium bowl.</Instruction>
+				<Instruction>Drain pasta and return to pot.</Instruction>
+				<Instruction>Pour some sauce into an 8 &times; 8 baking dish, just enough to cover the bottom.</Instruction>
+				<Instruction>Add about &frac13; of the pasta, top with some sauce.</Instruction>
+				<Instruction>Using a tablespoon, scoop 5 - 6 scoops of the cheese mixture over top the sauce.</Instruction>
+				<Instruction>Top cheese with another layer of sauce.</Instruction>
+				<Instruction>Scoop the remaining cheese over the layer of sauce.</Instruction>
+				<Instruction>Add the rest of the pasta, and then the rest of the sauce.</Instruction>
+				<Instruction>Top the ziti with the rest of the shredded provolone and mozzarella cheese.</Instruction>
+				<Instruction>Cover the baking dish with foil, bake for 15 minutes.</Instruction>
+				<Instruction>Remove the foil, bake for another 5 - 10 minutes, until cheese on top is melted.</Instruction>
+				<Instruction>Let cool, and serve with extra grated Parmesan cheese on the side.</Instruction>
+			</Instructions>
+			<Links>
+				<Link>
+					<HREF>https://www.girlgonegourmet.com/four-cheese-baked-ziti/#tasty-recipes-6991</HREF>
+					<Text>Girl Gone Gourmet</Text>
+				</Link>
+			</Links>
 		</Recipe>
 	</Recipes>
 </Root>

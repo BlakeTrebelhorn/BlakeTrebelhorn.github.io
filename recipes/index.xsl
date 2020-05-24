@@ -27,7 +27,7 @@
 
 				<!-- Latest compiled and minified JavaScript -->
 				<script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/js/bootstrap-select.min.js"/>
-				<title>Blake Trebelhorn</title>
+				<title>Recipes | Blake Trebelhorn</title>
 				<!-- https://stackoverflow.com/a/16436975 -->
 				<script type="text/javascript">
 					function arraysEqual(a, b) {
@@ -86,11 +86,7 @@
 						<div class="col-xs-12 col-sm-5">
 							<div class="form-group">
 								<label for="search" class="mr-2 sr-only">Search</label>
-								<input type="text" class="form-control" id="search" placeholder="Search">
-									<xsl:attribute name="onkeyup">
-
-									</xsl:attribute>
-								</input>
+								<input type="text" class="form-control" id="search" placeholder="Search"/>
 							</div>
 						</div>
 						<div class="col-xs-12 col-sm-2 font-weight-bold text-sm-center mb-3 mb-sm-0">Or</div>
