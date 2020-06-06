@@ -94,18 +94,28 @@
 							<div class="form-group">
 								<label for="filterSelect" class="sr-only">Filter</label>
 								<select multiple="multiple" class="selectpicker" id="filterSelect" title="Filter">
-									<xsl:for-each select="/Root/Recipes/Recipe/Tags/Tag/text()[generate-id() = generate-id(key('uniqueTags', .)[1])]">
-										<option>
-											<xsl:value-of select="."/>
-										</option>
-									</xsl:for-each>
+									<optgroup label="Type">
+										<xsl:for-each
+												select="/Root/Recipes/Recipe/Tags/Tag[@type = 'category']/text()[generate-id() = generate-id(key('uniqueTags', .)[1])]">
+											<xsl:sort select="string-length(substring-after('|Main|Side|Desert|Other|', .))" data-type="number" order="descending"/>
+											<option>
+												<xsl:value-of select="."/>
+											</option>
+										</xsl:for-each>
+									</optgroup>
+									<optgroup>
+										<xsl:for-each
+												select="/Root/Recipes/Recipe/Tags/Tag[not(@type)]/text()[generate-id() = generate-id(key('uniqueTags', .)[1])]">
+											<option>
+												<xsl:value-of select="."/>
+											</option>
+										</xsl:for-each>
+									</optgroup>
 								</select>
 							</div>
 						</div>
 					</div>
-					<div id="card-container">
-						<xsl:apply-templates select="/Root/Recipes/Recipe"/>
-					</div>
+					<xsl:apply-templates select="/Root/Recipes/Recipe"/>
 				</div>
 			</body>
 		</html>

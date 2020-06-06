@@ -7,6 +7,7 @@
 		<!ELEMENT ID (#PCDATA)>
 		<!ELEMENT Tags (Tag)*>
 		<!ELEMENT Tag (#PCDATA)>
+		<!ATTLIST Tag type CDATA #IMPLIED>
 		<!ELEMENT Title (#PCDATA)>
 		<!ELEMENT Ingredients (Ingredient)*>
 		<!ELEMENT Ingredient (#PCDATA)>
@@ -36,6 +37,7 @@
 			<ID>1</ID>
 			<Title>Dragon Pork (or Beef) Noodles</Title>
 			<Tags>
+				<Tag type="category">Main</Tag>
 				<Tag>Beef</Tag>
 				<Tag>Easy</Tag>
 				<Tag>Quick</Tag>
@@ -67,28 +69,41 @@
 		</Recipe>
 		<Recipe>
 			<ID>2</ID>
-			<Title>Pigs in a Blanket</Title>
+			<Title>Mexican Rice</Title>
 			<Tags>
-				<Tag>Pork</Tag>
-				<Tag>Easy</Tag>
-				<Tag>Quick</Tag>
+				<Tag type="category">Side</Tag>
+				<Tag>Rice</Tag>
+				<Tag>Mexican</Tag>
 			</Tags>
 			<Ingredients>
-				<Ingredient>1 package of hot dogs</Ingredient>
-				<Ingredient>velveeta cheese</Ingredient>
-				<Ingredient>1 tube crescent rolls</Ingredient>
+				<Ingredient>3 Tbsp. vegetable oil</Ingredient>
+				<Ingredient>1 &frac12; cups white rice, rinsed</Ingredient>
+				<Ingredient>1 tsp. ground cumin</Ingredient>
+				<Ingredient>1 white onion, finely chopped</Ingredient>
+				<Ingredient>1 garlic clove, minced</Ingredient>
+				<Ingredient>1 8 oz. can tomato sauce</Ingredient>
+				<Ingredient>2 &frac14; chicken broth</Ingredient>
+				<Ingredient>1 tsp kosher salt</Ingredient>
+				<Ingredient>&frac12; tsp black pepper</Ingredient>
+				<Ingredient>&frac12; cup minced cilantro or parsley for garnish</Ingredient>
 			</Ingredients>
 			<Instructions>
-				<Instruction>Pre-heat oven according to directions on crescent roll tube.</Instruction>
-				<Instruction>Slice down middle of hot dog. Using a slice of velveeta cheese, break it into &frac14; pieces, placing 2 pieces in the slits of the hot dogs</Instruction>
-				<Instruction>Roll the cheese filled hot dog inside of a crescent roll.</Instruction>
-				<Instruction>Cook according to directions on crescent roll tube, or until golden brown.</Instruction>
+				<Instruction>In a large sauce pan, heat the oil over medium heat.</Instruction>
+				<Instruction>Add the rice and saut&eacute;, stirring, until lightly browned, about 10 minutes.</Instruction>
+				<Instruction>Stir in cumin and cook for 30 seconds.</Instruction>
+				<Instruction>Add the onion and garlic and cook, stirring often, for about 5 minutes.</Instruction>
+				<Instruction>Pour the tomato sauce into a 4 cup or larger glass measuring cup. Add enough chicken broth to make 3 &frac14; cups total and stir into the rice.</Instruction>
+				<Instruction>Add salt and pepper.</Instruction>
+				<Instruction>Bring to a boil. Stir once, reduce the heat, cover, and simmer for 20 minutes.</Instruction>
+				<Instruction>Remove the pan from the heat without uncovering, let sit for 10 minutes.</Instruction>
+				<Instruction>Fluff rice with a large fork and sprinkle on garnish, and serve.</Instruction>
 			</Instructions>
 		</Recipe>
 		<Recipe>
 			<ID>3</ID>
 			<Title>Garlic Noodles</Title>
 			<Tags>
+				<Tag type="category">Main</Tag>
 				<Tag>Easy</Tag>
 				<Tag>Quick</Tag>
 				<Tag>Asian</Tag>
@@ -119,6 +134,7 @@
 			<ID>4</ID>
 			<Title>Orange Chicken</Title>
 			<Tags>
+				<Tag type="category">Main</Tag>
 				<Tag>Chicken</Tag>
 				<Tag>Asian</Tag>
 			</Tags>
@@ -154,6 +170,7 @@
 			<ID>5</ID>
 			<Title>Pizza Burger Casserole</Title>
 			<Tags>
+				<Tag type="category">Main</Tag>
 				<Tag>Italian</Tag>
 				<Tag>Pasta</Tag>
 				<Tag>Pizza</Tag>
@@ -185,6 +202,7 @@
 			<ID>6</ID>
 			<Title>Pizza Dippers</Title>
 			<Tags>
+				<Tag type="category">Main</Tag>
 				<Tag>Pizza</Tag>
 				<Tag>Pork</Tag>
 				<Tag>Easy</Tag>
@@ -217,6 +235,7 @@
 			<ID>7</ID>
 			<Title>Carbonara</Title>
 			<Tags>
+				<Tag type="category">Main</Tag>
 				<Tag>Italian</Tag>
 				<Tag>Pork</Tag>
 				<Tag>Easy</Tag>
@@ -257,6 +276,7 @@
 			<ID>8</ID>
 			<Title>Quesadilla</Title>
 			<Tags>
+				<Tag type="category">Main</Tag>
 				<Tag>Mexican</Tag>
 				<Tag>Chicken</Tag>
 				<Tag>Easy</Tag>
@@ -280,6 +300,7 @@
 			<ID>9</ID>
 			<Title>Pizza Bagels</Title>
 			<Tags>
+				<Tag type="category">Main</Tag>
 				<Tag>Pizza</Tag>
 				<Tag>Easy</Tag>
 				<Tag>Quick</Tag>
@@ -303,6 +324,7 @@
 			<ID>10</ID>
 			<Title>Ginger Soy Glazed Chicken</Title>
 			<Tags>
+				<Tag type="category">Main</Tag>
 				<Tag>Chicken</Tag>
 				<Tag>Asian</Tag>
 			</Tags>
@@ -340,6 +362,7 @@
 			<ID>11</ID>
 			<Title>Baked Nachos</Title>
 			<Tags>
+				<Tag type="category">Main</Tag>
 				<Tag>Beef</Tag>
 				<Tag>Mexican</Tag>
 			</Tags>
@@ -378,6 +401,7 @@
 			<ID>12</ID>
 			<Title>Mongolian Chicken</Title>
 			<Tags>
+				<Tag type="category">Main</Tag>
 				<Tag>Chicken</Tag>
 				<Tag>Asian</Tag>
 			</Tags>
@@ -414,6 +438,7 @@
 			<ID>13</ID>
 			<Title>Honey Garlic Chicken</Title>
 			<Tags>
+				<Tag type="category">Main</Tag>
 				<Tag>Chicken</Tag>
 				<Tag>Savory</Tag>
 			</Tags>
@@ -448,6 +473,7 @@
 			<ID>14</ID>
 			<Title>Honey Soy Chicken</Title>
 			<Tags>
+				<Tag type="category">Main</Tag>
 				<Tag>Chicken</Tag>
 				<Tag>Savory</Tag>
 			</Tags>
@@ -478,6 +504,7 @@
 			<ID>15</ID>
 			<Title>Kung Pao Chicken</Title>
 			<Tags>
+				<Tag type="category">Main</Tag>
 				<Tag>Chicken</Tag>
 				<Tag>Asian</Tag>
 			</Tags>
@@ -511,6 +538,7 @@
 			<ID>16</ID>
 			<Title>Ziti</Title>
 			<Tags>
+				<Tag type="category">Main</Tag>
 				<Tag>Beef</Tag>
 				<Tag>Pasta</Tag>
 				<Tag>Italian</Tag>
@@ -548,6 +576,36 @@
 				<Link>
 					<HREF>https://www.girlgonegourmet.com/four-cheese-baked-ziti/#tasty-recipes-6991</HREF>
 					<Text>Girl Gone Gourmet</Text>
+				</Link>
+			</Links>
+		</Recipe>
+		<Recipe>
+			<ID>17</ID>
+			<Title>Italian Grilled Cheese</Title>
+			<Tags>
+				<Tag type="category">Main</Tag>
+				<Tag>Easy</Tag>
+				<Tag>Quick</Tag>
+				<Tag>Italian</Tag>
+			</Tags>
+			<Ingredients>
+				<Ingredient>8 slices your favorite bread</Ingredient>
+				<Ingredient>8 thin slices mozzarella cheese</Ingredient>
+				<Ingredient>8 thin slices cheddar cheese</Ingredient>
+				<Ingredient>1 cup marinara pasta sauce</Ingredient>
+				<Ingredient>butter</Ingredient>
+			</Ingredients>
+			<Instructions>
+				<Instruction>Spread butter on the outside pieces of bread.</Instruction>
+				<Instruction>Spread marinara sauce on inside pieces of bread.</Instruction>
+				<Instruction>Layer 1 piece of each cheeses on top of the marinara.</Instruction>
+				<Instruction>Grill in hot skillet to melt cheese.</Instruction>
+				<Instruction>Serve hot.</Instruction>
+			</Instructions>
+			<Links>
+				<Link>
+					<HREF>https://tastesbetterfromscratch.com/italian-grilled-cheese-sandwich/</HREF>
+					<Text>Tastes Better From Scratch</Text>
 				</Link>
 			</Links>
 		</Recipe>
