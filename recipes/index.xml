@@ -145,6 +145,7 @@
 				<Ingredient>&frac12; tbsp rice vinegar</Ingredient>
 				<Ingredient>1 clove minced garlic</Ingredient>
 				<Ingredient>&frac14; tsp red pepper flakes</Ingredient>
+				<Ingredient>&frac14; grated ginger</Ingredient>
 				<Ingredient>as much cornstarch necessary (about &frac12; cup)</Ingredient>
 				<Ingredient>1 large egg</Ingredient>
 				<Ingredient>1 lb chicken</Ingredient>
@@ -608,6 +609,31 @@
 					<Text>Tastes Better From Scratch</Text>
 				</Link>
 			</Links>
+		</Recipe>
+		<Recipe>
+			<ID>18</ID>
+			<Title>Parmesan Crusted Chicken</Title>
+			<Tags>
+				<Tag type="category">Main</Tag>
+				<Tag>Easy</Tag>
+				<Tag>Chicken</Tag>
+			</Tags>
+			<Ingredients>
+				<Ingredient>4 chicken breasts, thinned</Ingredient>
+				<Ingredient>&frac12; cup mayo</Ingredient>
+				<Ingredient>&frac14; cup parmesan cheese</Ingredient>
+				<Ingredient>2 Tbsp Panko Breadcrumbs</Ingredient>
+				<Ingredient>Garlic Powder</Ingredient>
+				<Ingredient>Roasted Garlic &amp; Herb Seasoning</Ingredient>
+			</Ingredients>
+			<Instructions>
+				<Instruction>Pre-head oven to 425&deg; F.</Instruction>
+				<Instruction>Combine mayo and parmesan cheese.</Instruction>
+				<Instruction>Spread mixture on top of chicken.</Instruction>
+				<Instruction>Combine remaining ingredients.</Instruction>
+				<Instruction>Sprinkle atop chicken.</Instruction>
+				<Instruction>Bake for 20 min.</Instruction>
+			</Instructions>
 		</Recipe>
 	</Recipes>
 </Root>
